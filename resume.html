@@ -6,15 +6,15 @@
       <meta name="description" content="Welcome to Cecilia's resume website. Cecilia enjoy spending her time learning new ways to design and illustrate to make it healing for people to look and interactive with art.">
       <meta name="author" content="Cecilia Tran">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet">
 
       <!--stylesheets-->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <link rel="stylesheet" href="css/style.css">
 
       <!--javascript-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
       <script src="js/resume.js"></script>
     </head>
@@ -22,95 +22,324 @@
     <!--Navbar maybe-->
     <nav id="nav_bar">
       <ul class="nav_links">
-        <li><a href="url">Nav Bar</a></li>
-        <li><a href="url">Sign In</a></li>
-        <li><a href="url">Blog</a></li>
-        <li><a href="url">About</a></li>
+        <li><a href="#desc">About</a></li>
+        <li><a href="#exp">Experience</a></li>
+        <li><a href="#proj">Projects</a></li>
+        <li><a href="#cont">Contacts</a></li>
       </ul>
     </nav>
 
 
     <!-- landing -->
-    <section class="section1 title" style="background-color: #ffffff">
+    <section class="section1 title" id="first">
         <div class="panel">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12">
               <h1>CECILIA TRAN</h1>
-              <p style="color:white;">Enjoys designing and illustrating new ways for people to enjoy art.</p>
+              <p>Enjoys designing and illustrating new ways for people to enjoy art.</p>
             </div>
         </div>
     </section>
 
     <!-- about -->
-    <section class="section2 about" style="background-color: #7CC473">
+    <section class="section2 about" id="desc">
         <div class="panel">
-          <div class="col-md-7">
-              <h3>About Cecilia</h3>
-              <hr>
-              <p class="col-md-5">Hello my name is Cecilia Tran.
-              I am a senior undergrad majoring in software engineering at San Jose State University
-              with a focus in web and mobile programming, art and food.<br />
-              Located in San Jose, currently freelancing, I code, sell my artwork, and design new ideas in my free time besides school. <br />
-              </p>
-          </div>
-          <div class="col-md-3">
-                  Tools of trade:<br>
-                      <br> Code: HTML5, CSS3, Javascript, JQuery, AngularJS, NodeJS, Java<br>
-                      <br>Eclipse, Atom, Git<br>
-                      <br>Microsoft Word, Excel, Oracle SQL Developer<br>
-                      <br>Adobe Photoshop, Illustrator, Indesign, MAYA, Crystal Reports<br>
-          </div>
-              <!-- <img class="3" id="cat" src="images/cat.png" style="float: right; height:20%; width:20%;"> -->
+            <div class="col-md-12 col-sm-12">
+                <h3>About Cecilia</h3>
+                A senior undergrad majoring in software engineering at San Jose State University<br>
+                Focus in web and mobile programming, art and food.<br>
+                Located in San Jose, currently freelancing, she codes, sells her artwork, and design new ideas besides school. <br>
+                </p>
+            </div>
+            <div class="col-md-12 col-sm-12">
+                    <p class="tool">Tools of trade:</p>
+                    <div class="tool-panel">
+                        <br> Code: HTML5, CSS3, Javascript, JQuery, AngularJS, NodeJS, Java<br>
+                        <br>Eclipse, Atom, Git<br>
+                        <br>Microsoft Word, Excel, Oracle SQL Developer<br>
+                        <br>Adobe Photoshop, Illustrator, Indesign, MAYA, Crystal Reports<br>
+                    </div>
+            </div>
         </div>
     </section>
 
     <!-- experience green-->
-    <section class="section3 experience" style="height:400px; background-color: #FFD37E">
+    <section class="section3 experience" id="exp">
         <div class="panel">
-            <div class="col-md-9">
+            <div class=" col-md-12 col-sm-12">
                 <h3>EXPERIENCE</h3>
-                <p>Insane Ink (2012): Graphic Designer and Web Developer</p>
-
-                <p>City of San Jose Fleet and Tech Services(2015 - 2016): Junior Systems Analyst</p>
-                  <p>Worked for two teams: City of San Jose Fleet and the City of San Jose Tech Services
-                     Utilized Oracle SQL Developer and Crystal Reports to organize and write scripts and reports to assist the  eet supervisors.
-                     Created an interactive front-end web application for Construction Services Materials Testing Lab for making construction tests.</p>
-
-                <p>CISCO (2016): Hardware QA Crossfunctional Engineering Intern</p>
-                  <p>Wrote new test scripts to help further improve the team’s ability to diagnose hardware components in routers and untouched components.
-                     TMUX, Linux, TCL Improved the QA website by adding small features such as recognizing the owner of a current test to solve the confusion of who is the owner of the test.</p>
-
-                <br />
+                <hr>
+                <div class="sj col-md-6 col-sm-5">
+                    <p>City of San Jose Fleet and Tech Services
+                      Junior Systems Analyst
+                      (2015 - 2016)</p>
+                    <p>Worked for two teams: City of San Jose Fleet and the City of San Jose Tech Services
+                       Utilized Oracle SQL Developer and Crystal Reports to organize and write scripts and reports to assist the  eet supervisors.
+                       Created an interactive front-end web application for Construction Services Materials Testing Lab for making construction tests.</p>
+                </div>
+                <div class="cisco col-md-6 col-sm-5">
+                    <p>CISCO
+                      Hardware QA Crossfunctional Engineering Intern
+                      (2016)</p>
+                    <p>Wrote new test scripts to help further improve the team’s ability to diagnose hardware components in routers and untouched components.
+                       TMUX, Linux, TCL Improved the QA website by adding small features such as recognizing the owner of a current test to solve the confusion of who is the owner of the test.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- projects -->
-    <section class="section4 projects">
-        <div class="panel">
+    <section class="section4 projects" id="proj">
+        <div class="panel col-md-12 col-xs-12">
             <h3>PROJECTS</h3>
-            <p>add the tabbed</p>
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active tabb">
+                    <a id="tabs" data-toggle="tab" data-target="#proj1">Rentennial</a>
+                </li>
+                <li class="tabb">
+                    <a id="tabs" data-toggle="tab" data-target="#proj2">My Website</a>
+                </li>
+                <li class="tabb">
+                    <a id="tabs" data-toggle="tab" data-target="#proj3">Other Projects</a>
+                </li>
+            </ul>
+
+              <div class ="tab-content">
+                  <div class="tab-pane fade in active" id="proj1">
+                      <div class="container">
+                          <div class="row">
+                                  <br><br>
+                                  <div class="col-md-6 col-xs-12">
+                                      <!--CAROUSEL-->
+                                      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                          <!-- Indicators -->
+                                          <ol class="carousel-indicators">
+                                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                                            <li data-target="#myCarousel" data-slide-to="4"></li>
+                                            <li data-target="#myCarousel" data-slide-to="5"></li>
+                                            <li data-target="#myCarousel" data-slide-to="6"></li>
+                                            <li data-target="#myCarousel" data-slide-to="7"></li>
+                                            <li data-target="#myCarousel" data-slide-to="8"></li>
+                                            <li data-target="#myCarousel" data-slide-to="9"></li>
+                                            <li data-target="#myCarousel" data-slide-to="10"></li>
+                                          </ol>
+
+                                          <!-- Wrapper for slides -->
+                                          <div class="carousel-inner" role="listbox">
+                                            <div class="item active">
+                                              <img src="images/r1.png" alt="img1" style="width: 100%; height: 100%;">
+                                            </div>
+
+                                            <div class="item">
+                                              <img src="images/r2.png" alt="img2" style="width: 100%; height: 100%;">
+                                            </div>
+
+                                            <div class="item">
+                                              <img src="images/r3.png" alt="img3" style="width: 100%; height: 100%;">
+                                            </div>
+
+                                            <div class="item">
+                                              <img src="images/r4.png" alt="img4" style="width: 100%; height: 100%;">
+                                            </div>
+                                            <div class="item">
+                                              <img src="images/r5.png" alt="img5" style="width: 100%; height: 100%;">
+                                            </div>
+                                            <div class="item">
+                                              <img src="images/r6.png" alt="img6" style="width: 100%; height: 100%;">
+                                            </div>
+                                            <div class="item">
+                                              <img src="images/r7.png" alt="img7" style="width: 100%; height: 100%;">
+                                            </div>
+                                            <div class="item">
+                                              <img src="images/r8.png" alt="img8" style="width: 100%; height: 100%;">
+                                            </div>
+                                            <div class="item">
+                                              <img src="images/r9.png" alt="img9" style="width: 100%; height: 100%;">
+                                            </div>
+                                            <div class="item">
+                                              <img src="images/r10.png" alt="img10" style="width: 100%; height: 100%;">
+                                            </div>
+                                            <div class="item">
+                                              <img src="images/profilewireframe.png" alt="img11" style="width: 100%; height: 100%;">
+                                            </div>
+                                            <div class="item">
+                                              <img src="images/searchwireframe.png" alt="img12" style="width: 100%; height: 100%;">
+                                            </div>
+                                            <div class="item">
+                                              <img src="images/entirewireframe.png" alt="img13" style="width: 100%; height: 100%;">
+                                            </div>
+
+                                          </div>
+
+                                          <!-- Left and right controls -->
+                                            <a class="left carousel-control" data-target="#myCarousel" role="button" data-slide="prev">
+                                              <span class="icon-prev" aria-hidden="true"></span>
+                                              <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="right carousel-control" data-target="#myCarousel" role="button" data-slide="next">
+                                              <span class="icon-next" aria-hidden="true"></span>
+                                              <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
+                                      </div>
+                                      <!--END OF CAROUSEL-->
+                                  <div class="col-md-6 col-xs-12">
+                                      <div id ="prjdescrip" >
+                                          <h2>Rentennial (2016)</h2>
+                                          <p>Rentennial is a cradle-to-grave application which allows anyone to be a landlord or tenant with full access and ability to search listings, save listings, make listings, apply for listings, sign leases, and pay for rent.</p>
+                                          <li>Used AngularJS, CSS3, and JS to design the UX/UI.</li>
+                                          <li> In charge of making wireframes and approving them with group members </li>
+                                          <li> Communicated with 2 group members to create user stories before working on the project needs. </li>
+                                          </p>
+                                          <p>
+                                          Photoshop, Django, AngularJS, Python, Stripe, Docusign;  The github repository is currently private.
+                                          </p>
+                                          <br />
+                                          <a href="http://rentennial.herokuapp.com/" class="myButton">Rentennial Site</a>
+                                          <a href="https://github.com/mitchswaldman/rentennial" class="myButton">Rentennial Git Files</a>
+                                      </div>
+                                  </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="tab-pane fade" id="proj2">
+                      <div class="container">
+                          <div class="row">
+                              <br><br>
+                                  <div class="col-md-7 col-xs-12">
+                                      <!--CAROUSEL-->
+                                      <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+                                          <!-- Indicators -->
+                                          <ol class="carousel-indicators">
+                                            <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+                                            <li data-target="#myCarousel2" data-slide-to="1"></li>
+                                            <li data-target="#myCarousel2" data-slide-to="2"></li>
+                                            <li data-target="#myCarousel2" data-slide-to="3"></li>
+                                          </ol>
+
+                                          <!-- Wrapper for slides -->
+                                          <div class="carousel-inner" role="listbox">
+                                            <div class="item active">
+                                              <img src="images/Techeria.png" alt="Chania" style="width: 100%; height: 100%;">
+                                            </div>
+
+                                            <div class="item">
+                                              <img src="images/Techeria2.png" alt="Chania" style="width: 100%; height: 100%;">
+                                            </div>
+
+                                            <div class="item">
+                                              <img src="images/Techeria3.png" alt="Flower" style="width: 100%; height: 100%;">
+                                            </div>
+
+                                            <div class="item">
+                                              <img src="images/Techeria4.png" alt="Flower" style="width: 100%; height: 100%;">
+                                            </div>
+                                          </div>
+
+                                          <!-- Left and right controls -->
+                                            <a class="left carousel-control" data-target="#myCarousel2" role="button" data-slide="prev">
+                                              <span class="icon-prev" aria-hidden="true"></span>
+                                              <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="right carousel-control" data-target="#myCarousel2" role="button" data-slide="next">
+                                              <span class="icon-next" aria-hidden="true"></span>
+                                              <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
+                                  </div>
+                                      <!--END OF CAROUSEL-->
+                                  <div class="col-md-5 col-xs-12">
+                                      <div id = "prjdescrip" >
+                                          <h2>Techeria (2015)</h2>
+                                          <p>Techeria is a site to connect engineering students with employers like LinkedIn. I worked on the UX design and front-end of the project.</p>
+                                          <p>
+                                          Google App Engine, AngularJS, Bootstrap, Python
+                                          </p>
+                                          <br />
+                                          <a href="http://techeria.com/" class="myButton">Techeria Site</a><br /><br />
+                                          <a href="https://github.com/jmelberg/Techeria" class="myButton">Techeria Git Files</a><br /><br />
+                                      </div>
+                                  </div>
+                          </div>
+                      </div>
+                  </div>
+
+
+                  <div class="tab-pane fade" id="proj3">
+                      <div class="container">
+                          <div class="row">
+                              <br><br>
+                               <div class="col-md-6 col-xs-12">
+                                      <div id = "prjdescrip" >
+                                          <h2>MySJSU Class Registration (2015)</h2>
+                                          <p>Group project with 5 people. A revamp of MySJSU's class registration.</p>
+                                          <p>I worked on the front end using CSS and PHP.
+                                          </p>
+                                          <p>
+                                          PHP, MySQL, Laravel, AWS
+                                          </p>
+                                          <br />
+                                          <a href="https://github.com/Ceciceciceci/MySJSU-Class-Registration" class="myButton">MySJSU Class Reg github</a><br /><br />
+                                        </div>
+                              </div>
+                              <div class="col-md-6 col-xs-12">
+                                      <div id = "prjdescrip" >
+                                          <h2>Old Portfolio Website (2016)</h2>
+                                          <p>My website!!!</p>
+                                          <p>All done with MEAN stack. Comment page uses mongoDb to store comments. Hosted on Heroku.
+                                            <br>I sketched out my wire frame for this website before I started to code it up.
+                                            <br>I though about what tabs I needed and if I should do it all one page or across different tabs.
+                                            <br>The end result was that for easier navigation with my color scheme, I decided to address my different ideas and sections into tabs.
+                                          </p>
+                                          <p>
+                                          NodeJS, ExpressJS, AngularJS, MongoDB
+                                          </p>
+                                          <br />
+                                          <a href="https://github.com/Ceciceciceci/meanapp" class="myButton">My website github</a>
+                                          <a href="http://cherchececile.herokuapp.com/" class="myButton">Visit Site</a>
+                                      </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
         </div>
     </section>
 
     <!-- Gallery -->
     <section class="section5 gallery">
         <div class="panel">
-           <h3>ARTWORK</h3>
-           <p>Masonry for img loading</p>
+            <div class="col-md-12 col-sm-12">
+                 <h3>ARTWORK</h3>
+                 <p>Masonry for img loading</p>
+            </div>
         </div>
     </section>
 
-    <!-- contact dark brown-->
-    <section class="section6 contact" style="height:400px; background-color: #280800">
+    <!-- contact-->
+    <section class="section6 contact" id="cont">
         <div class="panel">
-            <div class="col-md-9">
+            <div class="col-md-12 col-sm-12">
                <h3>CONTACT</h3>
               <!-- icons will be white #FFFFFF -->
                <a href="https://www.linkedin.com/in/cecilia-tran-98b75098/">Linkedin</a>
-               <a href="https://www.behance.net/cecitran94fab0">Behance</a>
+               <a href="https://www.behance.net/cecitran94fab0" class="icon-2 behance" title="Behance">
+                   <svg viewBox="0 0 512 512">
+                      <path class="be" d="M254.8 171.8c6.4 8.9 9.6 19.6 9.6 32 0 12.8-3.2 23.1-9.7 30.9 -3.6 4.4-9 8.4-16 12 10.7 3.9 18.8 10.1 24.2 18.5 5.5 8.4 8.2 18.7 8.2 30.7 0 12.4-3.1 23.6-9.3 33.5 -4 6.6-8.9 12.1-14.9 16.5 -6.7 5.1-14.6 8.6-23.7 10.5 -9.1 1.9-19 2.8-29.6 2.8H99.1V149.5h101.4C226.1 149.8 244.2 157.3 254.8 171.8zM140.9 185.9v46.3h51c9.1 0 16.5-1.7 22.2-5.2 5.7-3.5 8.5-9.6 8.5-18.4 0-9.8-3.8-16.2-11.3-19.4 -6.5-2.2-14.7-3.3-24.8-3.3H140.9zM140.9 266.9v55.9h50.9c9.1 0 16.2-1.2 21.2-3.7 9.2-4.6 13.8-13.3 13.8-26.2 0-10.9-4.5-18.4-13.4-22.5 -5-2.3-12-3.5-21-3.6H140.9L140.9 266.9zM396.4 207.3c10.8 4.8 19.8 12.5 26.8 23 6.4 9.2 10.5 19.9 12.4 32.1 1.1 7.1 1.5 17.4 1.3 30.8H323.9c0.6 15.6 6 26.5 16.2 32.7 6.2 3.9 13.6 5.8 22.4 5.8 9.2 0 16.8-2.4 22.5-7.1 3.2-2.6 5.9-6.1 8.4-10.7h41.4c-1.1 9.2-6.1 18.5-15 28 -13.9 15.1-33.4 22.6-58.4 22.6 -20.6 0-38.9-6.4-54.6-19.1 -15.8-12.7-23.7-33.4-23.7-62.1 0-26.9 7.1-47.5 21.4-61.8 14.2-14.3 32.7-21.5 55.5-21.5C373.4 200 385.6 202.4 396.4 207.3zM335.7 242.3c-5.7 5.9-9.3 13.9-10.8 24h69.9c-0.7-10.8-4.3-18.9-10.8-24.5 -6.5-5.6-14.5-8.4-24.1-8.4C349.5 233.4 341.4 236.4 335.7 242.3zM402.8 161.5h-91.2V182.7h91.2V161.5z"/>
+                   </svg>
+               </a>
+               <!-- <a href="https://www.behance.net/cecitran94fab0">Behance</a> -->
                <a href="https://instagram.com/ichiknees/">Instagram</a>
                <a href="https://github.com/Ceciceciceci">Github</a>
-               <a href="">Email</a>
+               <a href="" class="icon-3 email" title="email">
+                 <svg viewBox="0 0 90 90">
+                     	<path class="st0" d="M59,71H16C9.4,71,4,65.6,4,59V16C4,9.4,9.4,4,16,4h43c6.6,0,12,5.4,12,12v43C71,65.6,65.6,71,59,71z"/>
+                     	<path class="st1" d="M4,25l35,17 M72,25L37,42"/>
+                 </svg>
+               </a>
             </div>
         </div>
     </section>
