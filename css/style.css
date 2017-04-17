@@ -1,5 +1,7 @@
 
-@import url('https://fonts.googleapis.com/css?family=Quicksand:300,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,700');
+/*font-family: 'Open Sans Condensed', sans-serif;*/
+/*font-family: 'Open Sans', sans-serif;*/
 
 /************* GENERAL *************/
 html {
@@ -14,15 +16,22 @@ body {
 }
 
 section{
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #2E2E2E;
-    /*display:block;*/
+    display:block;
 }
 
 section h3{
    width: 100%;
    padding: 40px 0px;
-   text-align: center;
+}
+
+/* Responsive bit */
+@media only screen and (max-width: 320px) {
+    body, section {
+        display: block;
+        margin: 0;
+    }
 }
 
 /**********************************/
@@ -47,7 +56,7 @@ section h3{
 
 .nav_links {
     margin: 0;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     display:block;
     text-align:center;
     color: #2E2E2E;
@@ -56,7 +65,7 @@ section h3{
 
 .nav_links li {
     margin-top: 25px;
-    margin-right: 50px;
+    margin-right: 5px;
     display: inline-block;
 }
 
@@ -86,30 +95,24 @@ section h3{
 /*Title*/
 .section1{
     height: 600px;
-    background-color: #FFFFFF;
-}
-.section1 h1{
-    margin-top: 50px;
-    text-align: center;
-}
-.section1 p{
-    text-align: center;
+    /*background-color: white;*/
+    background-image: url('title.jpg');
+    /*background-repeat: no-repeat;*/
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top center;
 }
 
 /*About*/
 .section2{
-    height: 600px;
-    background-color: #7CC473;
-    @media (max-width: 330px) {
-        height: 500px;
-        background-color: #7CC473;
-    }
+    height: 800px;
+    background-color: #FFFFFF;
 }
 
 /*Experience*/
 .section3{
     height: 400px;
-    background-color: #FFD37E;
+    background-color: #F9EAD8;
 }
 
 /*Project*/
@@ -119,20 +122,96 @@ section h3{
 }
 
 /*Gallery*/
-.section5{
+/*.section5{
     height: 400px;
     background-color: #FFFFFF;
-}
+}*/
 
 /*Contact*/
 .section6{
     height: 400px;
-    background-color: #280800;
+    background-color: #2E2E2E;
 }
+
+
+/**********************************/
+/************* TITLE **************/
+/**********************************/
+.section1 h1{
+    margin-top: 50px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 75px;
+    color: #FFFFFF;
+}
+.section1 p{
+    text-align: center;
+    color: #FFFFFF;
+}
+.title-line {
+    width: 500px;
+    height: 2px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    background-color:white;
+    margin: 0 auto;
+}
+
+/**********************************/
+/************* ABOUT **************/
+/**********************************/
+.section2 h3{
+    margin-top: 50px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #7CC473;
+    font-size: 50px;
+    padding: 20px 0px;
+}
+.section1 p{
+    text-align: center;
+}
+.image-me{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.course .course-panel{
+    width: 320px;
+    position: absolute;
+    left: -280px;
+    z-index: 2;
+    background-color: white;
+}
+
+/**********************************/
+/********** EXPERIENCE ************/
+/**********************************/
+.section3 h3{
+  margin-top: 50px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #7CC473;
+  font-size: 50px;
+  padding: 20px 0px;
+}
+/*.section4 p{
+    text-align: center;
+}*/
+
 
 /**********************************/
 /*********** PROJECTS *************/
 /**********************************/
+.section4 h3{
+  margin-top: 50px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #7CC473;
+  font-size: 50px;
+  padding: 20px 0px;
+}
+/*.section4 p{
+    text-align: center;
+}*/
+
 .tabb{
     color: #7CC473;
 }
@@ -173,6 +252,16 @@ section h3{
 /**********************************/
 .section6 h3{
     color: #FFFFFF;
+    text-align: center;
+}
+
+.icon-panel{
+  background-color: white;
+  height: 357px;
+  width: 350px;
+  border: 5px blue;
+  box-shadow: 50% white;
+  z-index: 1;
 }
 
 svg{
@@ -203,10 +292,7 @@ svg .st1 {
   stroke-miterlimit:10;
 }
 
-/* for different sizes
-@media (max-width: 785px) {
-@media (max-width: 599px) {*/
-
-/*@media (max-width: 1032px) {
-@media (max-width: 780px) {
-@media (max-width: 430px) {*/
+/*for different sizes*/
+@media screen and (max-width: 785px) {}
+@media screen and (max-width: 600px) {}
+@media screen and (max-width: 430px) {}
