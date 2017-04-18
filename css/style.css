@@ -18,7 +18,8 @@ body {
 section{
     font-family: 'Open Sans', sans-serif;
     color: #2E2E2E;
-    display:block;
+    display: block;
+    border: 0px 0px 0px 0px;
 }
 
 section h3{
@@ -62,6 +63,10 @@ section h3{
     color: #2E2E2E;
 
 }
+.nav_links .active {
+    color: #7CC473;
+    text-decoration: none;
+}
 
 .nav_links li {
     margin-top: 25px;
@@ -77,7 +82,7 @@ section h3{
 
 .nav_links a:hover {
     color: #7CC473;
-
+    transform: rotate(-10deg);
     /*Transition*/
     -webkit-transition:All .5s ease;
     -moz-transition:All .5s ease;
@@ -111,8 +116,8 @@ section h3{
 
 /*Experience*/
 .section3{
-    height: 400px;
-    background-color: #F9EAD8;
+    height: 600px;
+    background-color: #FFF2E1;
 }
 
 /*Project*/
@@ -139,23 +144,94 @@ section h3{
 /**********************************/
 .section1 h1{
     margin-top: 50px;
-    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
     font-size: 75px;
     color: #FFFFFF;
+    text-align: center;
 }
+
+.title-line {
+    width: 700px;
+    height: 1px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    background-color:white;
+    margin: 0 auto;
+    opacity:0.5;
+}
+
 .section1 p{
     text-align: center;
     color: #FFFFFF;
+    padding-top: 15px;
+    margin-bottom: 25%;
 }
-.title-line {
-    width: 500px;
-    height: 2px;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    background-color:white;
-    margin: 0 auto;
+
+@media screen and (max-width: 430px) {
+
+    .section1 title{
+        height: 600px;
+        background-image: url('title.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    /*.title-panel{
+      z-index: 2;
+    }*/
+    .section1 h1{
+        margin-top: 0px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 75px;
+        color: #000000;
+    }
+    .section1 p{
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 25%;
+    }
 }
+
+.chevron {
+  position: relative;
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 6px;
+  height: 5px;
+  width: 100px;
+  margin: 0 auto;
+  left: 45%;
+}
+
+.chevron:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 51%;
+  background: #FFFFFF;
+  -webkit-transform: skew(0deg, 15deg);
+  -moz-transform: skew(0deg, 15deg);
+  -ms-transform: skew(0deg, 15deg);
+  -o-transform: skew(0deg, 15deg);
+  transform: skew(0deg, 15deg);
+}
+.chevron:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50%;
+  width: 50%;
+  background: #FFFFFF;
+  -webkit-transform: skew(0deg, -15deg);
+  -moz-transform: skew(0deg, -15deg);
+  -ms-transform: skew(0deg, -15deg);
+  -o-transform: skew(0deg, -15deg);
+  transform: skew(0deg, -15deg);
+}​
 
 /**********************************/
 /************* ABOUT **************/
@@ -164,34 +240,31 @@ section h3{
     margin-top: 50px;
     font-family: 'Open Sans Condensed', sans-serif;
     color: #7CC473;
-    font-size: 50px;
     padding: 20px 0px;
 }
-.section1 p{
+/*.section2 p{
     text-align: center;
-}
+}*/
 .image-me{
+    /*margin-top: 50px;*/
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
-.course .course-panel{
-    width: 320px;
-    position: absolute;
-    left: -280px;
-    z-index: 2;
-    background-color: white;
+.image-me h3{
+      font-size: 50px;
+      color: #7CC473;
 }
 
 /**********************************/
 /********** EXPERIENCE ************/
 /**********************************/
 .section3 h3{
-  margin-top: 50px;
   font-family: 'Open Sans Condensed', sans-serif;
   color: #7CC473;
   font-size: 50px;
   padding: 20px 0px;
+  text-align: center;
 }
 /*.section4 p{
     text-align: center;
@@ -202,7 +275,6 @@ section h3{
 /*********** PROJECTS *************/
 /**********************************/
 .section4 h3{
-  margin-top: 50px;
   font-family: 'Open Sans Condensed', sans-serif;
   color: #7CC473;
   font-size: 50px;
@@ -253,15 +325,14 @@ section h3{
 .section6 h3{
     color: #FFFFFF;
     text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 50px;
+    padding: 20px 0px;
 }
 
-.icon-panel{
-  background-color: white;
-  height: 357px;
-  width: 350px;
-  border: 5px blue;
-  box-shadow: 50% white;
-  z-index: 1;
+.section6 a{
+    margin: 0 auto;
+    padding-right: 50px;
 }
 
 svg{
@@ -270,11 +341,6 @@ svg{
   /*transform: scale(1.25);*/
   height: 60px;
   width: 60px;
-}
-
-svg .be{
-  stroke:#FFFFFF;
-  fill:white;
 }
 
 svg .st0 {

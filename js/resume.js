@@ -34,6 +34,12 @@ $(document).ready(function(){
     });
 });
 
+//chevron
+$(document).ready(function(){
+    $(".chevron").animate()
+
+});
+
 //projects
 //for the tabs; bootstrap plug-in
 $(document).ready(function () {
