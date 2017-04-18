@@ -1,4 +1,5 @@
 
+/*******************NAVBAR*******************/
 //fixed navbar
 $(document).ready(function() {
   $(window).scroll(function () {
@@ -34,13 +35,50 @@ $(document).ready(function(){
     });
 });
 
-//chevron
-$(document).ready(function(){
-    $(".chevron").animate()
+//function to click and change the active highlight to another nav element navigation
+function changeActiveNav(event){
+    var scrollY = $(document).scrollTop();
+    $('#nav-bar a').each(function(){
+        var currHash = $(this);
+        var refElement = $(currHash.attr("href"));
+        if (refElement.position().top <= scrollY && refElement.position().top +
+            refElement.height() > scrollY){
+              $('#nav-bar ul li a').removeClass("active");
+              currHash.addClass("active");
+            }
+            else{
+              currHash.removeClass("active");
+            }
+    });
+}
+//on scoll change the active nav as well.
+$(document).ready(function () {
+    $(document).on("scroll", changeActiveNav);
 
+    //smoothscroll
+    // $('a[href^="#"]').on('click', function (e) {
+    //     e.preventDefault();
+    //     $(document).off("scroll");
+    //
+    //     $('a').each(function () {
+    //         $(this).removeClass('active');
+    //     })
+    //     $(this).addClass('active');
+    //
+    //     // var target = this.hash,
+    //     //     menu = target;
+    //     // $target = $(target);
+    //     // $('html, body').stop().animate({
+    //     //     'scrollTop': $target.offset().top+2
+    //     // }, 500, 'swing', function () {
+    //     //     window.location.hash = target;
+    //     //     $(document).on("scroll", changeActiveNav);
+    //     // });
+    // });
 });
 
-//projects
+
+/*******************FOR PROJECTS*******************/
 //for the tabs; bootstrap plug-in
 $(document).ready(function () {
     $('.dived').hide();
