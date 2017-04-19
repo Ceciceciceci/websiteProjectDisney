@@ -8,6 +8,7 @@ $(document).ready(function() {
       var pageScroll = $(this).scrollTop();
       if ($(window).scrollTop() > 0) {
           $('#nav_bar').addClass('fixed-navbar');
+          $('.handle').addClass('fixed-navbar_min');
       }
       //fixes the navbar to stay at the top top,
       //allows section1 shows
@@ -20,7 +21,7 @@ $(document).ready(function() {
 $(window).scroll(function () {
     // console.log($(window).scrollTop());
     var pageScroll = $(this).scrollTop();
-    console.log(pageScroll);
+    // console.log(pageScroll);
     //fade in some sections of the website
     if (pageScroll > $('.section3').offset().top-($(window).height()/2)){
         setTimeout(function(){
@@ -77,10 +78,10 @@ function changeActiveNav(event){
             refElement.height() > scrollY){
               $('#nav-bar ul li a').removeClass("active");
               currHash.addClass("active");
-            }
-            else{
-              currHash.removeClass("active");
-            }
+        }
+        else{
+          currHash.removeClass("active");
+        }
     });
 }
 
@@ -96,11 +97,11 @@ $(document).ready(function () {
 
 
 /****************Pop out navbar****************/
-$('.handle').click(function () {
-    var navbar = $('.nav_links');
-    if(navbar.hasClass('show')){
-        navbar.removeClass('show').addClass('hide');
-    }else{
-        navbar.removeClass('hide').addClass('show');
+$(document).ready(function() {
+    if( $('.handle').css('display') == ('block')) {
+        $('.handle').click(function () {
+            console.log("clicking!!!");
+            $('.nav_links').toggleClass('show');
+        });
     }
 });
