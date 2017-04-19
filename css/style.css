@@ -128,29 +128,23 @@ section h3{
 
 @media screen and (max-width: 450px) {
 
-  #nav_bar {
-      border: 0;
-      background-color: #ffffff;
-      opacity: 0.8;
-      border-radius: 0px;
-      margin-bottom: 0;
-      height:inherit;
+  .nav_links.showing {
+      -webkit-transition: all 500ms cubic-bezier(0.675, 0.170, 0.245, 0.795);
+      -moz-transition: all 500ms cubic-bezier(0.675, 0.170, 0.245, 0.795);
+      -ms-transition: all 500ms cubic-bezier(0.675, 0.170, 0.245, 0.795);
+      -o-transition: all 500ms cubic-bezier(0.675, 0.170, 0.245, 0.795);
+      transition: all 500ms cubic-bezier(0.675, 0.170, 0.245, 0.795);
+      height:200px;
+  }
+  .nav_links.hiding {
+      -webkit-transition: all 500ms cubic-bezier(0.675, 0.170, 0.245, 0.795);
+      -moz-transition: all 500ms cubic-bezier(0.675, 0.170, 0.245, 0.795);
+      -ms-transition: all 500ms cubic-bezier(0.675, 0.170, 0.245, 0.795);
+      -o-transition: all 500ms cubic-bezier(0.675, 0.170, 0.245, 0.795);
+      transition: all 500ms cubic-bezier(0.675, 0.170, 0.245, 0.795);
+      height:0px;
   }
 
-  .nav_links{
-    max-height: 0;
-    display:none;
-  }
-
-  .showing{
-    max-height: 20em;
-  }
-
-  #nav-bar ul li {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 15px;
-  }
   .handle{
     display: block;
   }
@@ -178,21 +172,75 @@ section h3{
 
 /*Project*/
 .section4{
-    height: 700px;
+    height: 800px;
     background-color: #FFFFFF;
 }
 
 /*Skill*/
 .section5{
-    height: 700px;
-    /*background-color: #FDF8E2;*/
-    background-color: #FFFFFF;
+    height: 900px;
+    position:relative;
+    margin:0 auto;
+    overflow:hidden;
 }
 
 /*Contact*/
 .section6{
     height: 500px;
     background-color: #2E2E2E;
+}
+
+/*Changing height of each section*/
+/*FOR SMALLER OR MOBILE VIEW*/
+@media screen and (max-width: 440px) {
+    .section1{
+        height: 700px;
+    }
+    .section2{
+        height: 1200px;
+    }
+    .section3{
+        height: 1300px;
+    }
+    .section5{
+        height: 1400px;
+    }
+
+    .section4{
+        height: 1500px;
+    }
+
+    .section6{
+        height: 500px;
+    }
+}
+
+@media screen and (min-width: 440px) and (max-width: 770px) {
+    .section1{
+       height: 700px;
+    }
+    .section2{
+          height: 1200px;
+    }
+    .section3{
+      height: 1000px;
+    }
+    .section4{
+      height: 1400px;
+    }
+    .section6{
+      height: 500px;
+    }
+}
+
+@media screen and (min-width: 775px) and (max-width: 991px) {
+    .section3{
+      height: 900px;
+    }
+
+    .section4{
+      height: 800px;
+    }
 }
 
 /**********************************/
@@ -251,51 +299,50 @@ section h3{
 }
 
 .chevron {
-  position: relative;
-  text-align: center;
-  padding: 12px;
-  margin-bottom: 6px;
-  height: 5px;
-  width: 100px;
-  margin: 0 auto;
-  left:0;
-  margin-top: 300px;
+    position: relative;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 6px;
+    height: 5px;
+    width: 100px;
+    margin: 0 auto;
+    left:0;
+    margin-top: 300px;
 }
 
 .chevron:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 51%;
-  background: #FFFFFF;
-  -webkit-transform: skew(0deg, 15deg);
-  -moz-transform: skew(0deg, 15deg);
-  -ms-transform: skew(0deg, 15deg);
-  -o-transform: skew(0deg, 15deg);
-  transform: skew(0deg, 15deg);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 51%;
+    background: #FFFFFF;
+    -webkit-transform: skew(0deg, 15deg);
+    -moz-transform: skew(0deg, 15deg);
+    -ms-transform: skew(0deg, 15deg);
+    -o-transform: skew(0deg, 15deg);
+    transform: skew(0deg, 15deg);
 }
 .chevron:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 50%;
-  width: 50%;
-  background: #FFFFFF;
-  -webkit-transform: skew(0deg, -15deg);
-  -moz-transform: skew(0deg, -15deg);
-  -ms-transform: skew(0deg, -15deg);
-  -o-transform: skew(0deg, -15deg);
-  transform: skew(0deg, -15deg);
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50%;
+    width: 50%;
+    background: #FFFFFF;
+    -webkit-transform: skew(0deg, -15deg);
+    -moz-transform: skew(0deg, -15deg);
+    -ms-transform: skew(0deg, -15deg);
+    -o-transform: skew(0deg, -15deg);
+    transform: skew(0deg, -15deg);
 }​
 
 /**********************************/
 /************* ABOUT **************/
 /**********************************/
 .section h3{
-  /*font-family: 'Open Sans Condensed', sans-serif;*/
   color: #7CC473;
   font-size: 50px;
   padding: 0px 0px 0px 0px;
@@ -310,7 +357,6 @@ section h3{
 
 
 .image-me{
-    /*margin-top: 50px;*/
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -348,8 +394,15 @@ section h3{
     margin-bottom: 50px;
     left: 10%;
     width: 50%;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.3s ease-in-out;
 }
 
+.fading-in{
+    opacity: 1;
+    transform: translateX(0px);
+}
 
 .sj-panel{
     margin-bottom: 20px;
@@ -389,6 +442,21 @@ section h3{
     100% {transform: scale(1.1, 1.1);}
 }
 
+@media screen and (min-width: 440px) and (max-width: 770px) {
+  .work-panel{
+      margin-bottom: 50px;
+      left: 10%;
+      width: 80%;
+      opacity: 0;
+      transform: translateX(-20px);
+      transition: all 0.3s ease-in-out;
+  }
+
+  .fading-in{
+      opacity: 1;
+      transform: translateX(0px);
+  }
+}
 
 @media screen and (max-width: 550px) {
 
@@ -400,6 +468,16 @@ section h3{
 /**********************************/
 /************* SKILLS *************/
 /**********************************/
+.section5:after{
+    content:'';
+    position:absolute;
+    left:55%; top:200px;
+    border-radius:50%;
+    height:150px;
+    width:250px;
+    box-shadow: 0px 0px 0px 2000px #FFFFFF;
+}
+
 .section5 h3{
     font-family: 'Open Sans Condensed', sans-serif;
     color: #7CC473;
@@ -418,29 +496,78 @@ section h3{
     position: absolute;
 }
 
-.lang-panel{
-    margin-top: 15px;
-    z-index: 4;
-    background-color: #FFD37E;
-    opacity: 0.5;
-    padding: 50px;
+.skill-panel{
+    z-index: 3;
 }
-.tool-panel{
+
+.lang-panel{
+    position: absolute;
     margin-top: 35px;
     z-index: 4;
-    background-color: #9ECE99;
-    opacity: 0.6;
+    background-color: #FFD37E;
+    opacity: 0.3;
     padding: 50px;
+    height: 400px;
+    width: 400px;
+    margin-left: 200px;
+}
+.tool-panel{
+    position: absolute;
+    margin-top: 250px;
+    z-index: 4;
+    background-color: #9ECE99;
+    opacity: 0.4;
+    padding: 50px;
+    height: 400px;
+    width: 400px;
+    margin-left: 50px;
+
 }
 
 .lang-panel-text{
-    z-index: 6;
+    position: absolute;
+    z-index: 10;
     opacity: 1;
+    margin-top: 85px;
+    margin-left: 250px;
+    transform: translateX(-20px);
+    transition: all 0.3s ease-in-out;
+}
+
+.lang-panel-text p{
+    font-size: 25px;
+    color: #FFD37E;
 }
 
 .tool-panel-text{
-    z-index: 6;
+    position: absolute;
+    z-index: 10;
     opacity: 1;
+    margin-top: 300px;
+    margin-left: 100px;
+    transform: translateX(-20px);
+    transition: all 0.3s ease-in-out;
+}
+
+.tool-panel-text p{
+    font-size: 25px;
+    color: #9ECE99;
+}
+
+@media screen and (max-width: 440px) {
+
+  .section6 .nextButton{
+      margin-top: 30px;
+      font-size:15px;
+      padding:19px 35px;
+  }
+  .nextButton:hover {
+      background-color:#FDF8E2;
+      opacity: 1;
+      font-size: 30px;
+      text-decoration: none;
+      color:#2E2E2E;
+  }
 }
 
 /**********************************/
@@ -449,10 +576,9 @@ section h3{
 .section4 h3{
     font-family: 'Open Sans Condensed', sans-serif;
     /*color: #7CC473;*/
-    color: #FFD37E;
+    color: #7CC473;
     font-size: 50px;
     padding: 20px 0px;
-    /*padding-bottom: 50px;*/
     text-align: center;
 }
 
@@ -562,7 +688,7 @@ section h3{
     padding: 20px 50px;
     text-align: center;
     height:50px;
-    width:50px;
+    width: 50px;
     opacity: 0.8;
 }
 
@@ -571,27 +697,8 @@ section h3{
     opacity: 0.8;
 }
 
-svg{
-    color: #280800; // IE8
-    fill: #280800;
-    /*transform: scale(1.25);*/
-    height: 60px;
-    width: 60px;
-}
+.section6 a:hover{
 
-svg .st0 {
-    fill-rule:evenodd;
-    clip-rule:evenodd;
-    fill:none;
-    stroke:#FFFFFF;
-    stroke-width:8;
-    stroke-miterlimit:10;
-}
-svg .st1 {
-    fill:none;
-    stroke:#FFFFFF;
-    stroke-width:5;
-    stroke-miterlimit:10;
 }
 
 .nextButton {
@@ -601,7 +708,7 @@ svg .st1 {
     -moz-border-radius:42px;
     -webkit-border-radius:42px;
     border-radius:42px;
-    /*display:inline-block;*/
+    display:inline-block;
     cursor:pointer;
     font-size:15px;
     padding:19px 35px;
@@ -620,7 +727,6 @@ svg .st1 {
 }
 
 @media screen and (max-width: 440px) {
-
   .section6 .nextButton{
       margin-top: 30px;
       font-size:15px;
@@ -632,62 +738,5 @@ svg .st1 {
       font-size: 30px;
       text-decoration: none;
       color:#2E2E2E;
-
   }
-
-}
-
-/*for different sizes*/
-
-/*FOR SMALLER OR MOBILE VIEW*/
-@media screen and (max-width: 440px) {
-  .section1{
-      height: 700px;
-  }
-  .section2{
-      height: 1200px;
-  }
-  .section3{
-      height: 1300px;
-  }
-  .section5{
-      height: 1400px;
-  }
-
-  .section4{
-      height: 1500px;
-  }
-
-  .section6{
-      height: 500px;
-  }
-}
-
-@media screen and (min-width: 440px) and (max-width: 770px) {
-  .section1{
-     height: 700px;
-  }
-  .section2{
-        height: 1200px;
-  }
-  .section3{
-    height: 800px;
-  }
-  .section4{
-    height: 1400px;
-  }
-  .section6{
-    height: 500px;
-  }
-}
-
-@media screen and (min-width: 775px) and (max-width: 991px) {
-    .section4{
-      height: 1100px;
-    }
-}
-@media screen and (max-width: 991px) {}
-@media screen and (max-width: 785px) {}
-@media screen and (max-width: 600px) {}
-@media screen and (max-width: 430px) {
 }
