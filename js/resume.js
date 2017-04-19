@@ -1,6 +1,7 @@
 
 /*******************NAVBAR*******************/
-//fixed navbar
+
+//FIX NAVBAR TO TOP
 $(document).ready(function() {
   $(window).scroll(function () {
       // console.log($(window).scrollTop());
@@ -15,7 +16,7 @@ $(document).ready(function() {
   });
 });
 
-//scrollTo div anchor scroll
+//SMOOTH SCROLLING
 $(document).ready(function(){
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {
@@ -26,21 +27,33 @@ $(document).ready(function(){
             var hash = this.hash;
             //animate and scroll Top method to add smooth page scroll
             $('html, body').animate({
-                scrollTop: $(hash).offset().top
+                scrollTop: $(hash).offset().top - 40
             }, 1000, function(){
               // Add hash (#) to URL when done scrolling (default click behavior)
               window.location.hash = hash;
             });
         }
     });
+
+    //change the active tag to the clicked nav item
+    $(document).on('scroll', changeActiveNav);
+    // smoothscroll
+    $('a[href^="#"]').on('click', function () {
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+    });
 });
 
 //function to click and change the active highlight to another nav element navigation
 function changeActiveNav(event){
     var scrollY = $(document).scrollTop();
-    $('#nav-bar a').each(function(){
+    $('#nav-bar ul li a').each(function(){
         var currHash = $(this);
+        console.log('currHash' + currHash);
         var refElement = $(currHash.attr("href"));
+        console.log('refElement' + refElement);
         if (refElement.position().top <= scrollY && refElement.position().top +
             refElement.height() > scrollY){
               $('#nav-bar ul li a').removeClass("active");
@@ -51,32 +64,6 @@ function changeActiveNav(event){
             }
     });
 }
-//on scoll change the active nav as well.
-$(document).ready(function () {
-    $(document).on("scroll", changeActiveNav);
-
-    //smoothscroll
-    // $('a[href^="#"]').on('click', function (e) {
-    //     e.preventDefault();
-    //     $(document).off("scroll");
-    //
-    //     $('a').each(function () {
-    //         $(this).removeClass('active');
-    //     })
-    //     $(this).addClass('active');
-    //
-    //     // var target = this.hash,
-    //     //     menu = target;
-    //     // $target = $(target);
-    //     // $('html, body').stop().animate({
-    //     //     'scrollTop': $target.offset().top+2
-    //     // }, 500, 'swing', function () {
-    //     //     window.location.hash = target;
-    //     //     $(document).on("scroll", changeActiveNav);
-    //     // });
-    // });
-});
-
 
 /*******************FOR PROJECTS*******************/
 //for the tabs; bootstrap plug-in
@@ -87,3 +74,20 @@ $(document).ready(function () {
     });
     $('.dived').slideUp(200);
 });
+
+
+/****************Fade in/out****************/
+$('.handle').click(function () {
+    var navbar = $('.nav_links');
+    if(navbar.hasClass('show')){
+        navbar.removeClass('show').addClass('hide');
+    }else{
+        navbar.removeClass('hide').addClass('show');
+    }
+});
+// $(window).resize(function(){
+//    var winwidth = $(window).innerWidth();
+//    if(winwidth > 768){
+//        $('.nav').removeClass('show').removeClass('hide');
+//    }
+// });

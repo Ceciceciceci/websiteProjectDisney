@@ -16,6 +16,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-position: top center;
+    background-repeat: no-repeat;
 }
 
 section{
@@ -23,6 +24,7 @@ section{
     color: #2E2E2E;
     display: block;
     border: 0px 0px 0px 0px;
+    z-index: -1;
 }
 
 section h3{
@@ -38,6 +40,12 @@ section h3{
     background-color: #2E2E2E;
     margin: 0 auto;
     opacity:0.2;
+}
+
+.italic-quote{
+    font-size: 10px;
+    color: grey;
+    text-align:center;
 }
 
 /* Responsive bit */
@@ -69,16 +77,12 @@ section h3{
 
 
 .nav_links {
-    margin: 0;
+    margin: 0 auto;
     font-family: 'Open Sans Condensed', sans-serif;
     display:block;
     text-align:center;
     color: #2E2E2E;
-    -webkit-transition: max-height 0.4s;
-    -ms-transistion: max-height 0.4s;
-    -moz-transition: max-height 0.4s;
-    transition: max-height 0.4s;
-    transition: max-height 0.4s;
+    left: -15%;
 }
 
 .nav_links .active {
@@ -92,24 +96,24 @@ section h3{
     display: inline-block;
 }
 
+.nav_links li:hover{
+  -webkit-animation-name: hoverscale;
+  animation-name: hoverscale;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
 .nav_links li a {
     padding: 0 25px;
     color: #2E2E2E;
     text-decoration: none;
 }
 
-.nav_links a:hover {
+.nav_links li a:hover {
     color: #7CC473;
-    /*Transition*/
-    -webkit-transition:All .5s ease;
-    -moz-transition:All .5s ease;
-    -o-transition:All .5s ease;
-
-    /*Transform*/
-    -webkit-transform: rotate(-10deg) scale(1.5);
-    -moz-transform: rotate(-10deg) scale(1.5);
-    -o-transform: rotate(-10deg) scale(1.5);
 }
+
 .handle{
   font-family: 'Open Sans Condensed', sans-serif;
   width: 100%;
@@ -158,10 +162,6 @@ section h3{
 /*Title*/
 .section1{
     height: 700px;
-    /*background-image: url('title.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: top center;*/
 }
 
 /*About*/
@@ -172,7 +172,7 @@ section h3{
 
 /*Experience*/
 .section3{
-    height: 800px;
+    height: 650px;
     background-color: #FDF8E2;
 }
 
@@ -182,6 +182,12 @@ section h3{
     background-color: #FFFFFF;
 }
 
+/*Skill*/
+.section5{
+    height: 700px;
+    /*background-color: #FDF8E2;*/
+    background-color: #FFFFFF;
+}
 
 /*Contact*/
 .section6{
@@ -252,7 +258,8 @@ section h3{
   height: 5px;
   width: 100px;
   margin: 0 auto;
-  left: 45%;
+  left:0;
+  margin-top: 300px;
 }
 
 .chevron:before {
@@ -343,29 +350,106 @@ section h3{
     width: 50%;
 }
 
+
 .sj-panel{
     margin-bottom: 20px;
+    padding: 10px;
 }
+
+.sj-panel:hover{
+    -webkit-animation-name: hoverscale;
+    animation-name: hoverscale;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
 .sj-panel b{
     font-size: 20px;
+}
+
+.cisco-panel{
+    padding: 10px;
+}
+
+.cisco-panel:hover{
+    -webkit-animation-name: hoverscale;
+    animation-name: hoverscale;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .cisco-panel b{
     font-size: 20px;
 }
 
+@keyframes hoverscale {
+    0% {transform: scale(1, 1);}
+    100% {transform: scale(1.1, 1.1);}
+}
+
+
 @media screen and (max-width: 550px) {
 
     .section3{
-        height: 1200px;
+        height: 1300px;
     }
 }
+
+/**********************************/
+/************* SKILLS *************/
+/**********************************/
+.section5 h3{
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #7CC473;
+    font-size: 50px;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.section5 dark-line{
+    padding-bottom: 15px;
+}
+
+.pencil{
+    opacity: 0.2;
+    z-index: 1;
+    position: absolute;
+}
+
+.lang-panel{
+    margin-top: 15px;
+    z-index: 4;
+    background-color: #FFD37E;
+    opacity: 0.5;
+    padding: 50px;
+}
+.tool-panel{
+    margin-top: 35px;
+    z-index: 4;
+    background-color: #9ECE99;
+    opacity: 0.6;
+    padding: 50px;
+}
+
+.lang-panel-text{
+    z-index: 6;
+    opacity: 1;
+}
+
+.tool-panel-text{
+    z-index: 6;
+    opacity: 1;
+}
+
 /**********************************/
 /*********** PROJECTS *************/
 /**********************************/
 .section4 h3{
     font-family: 'Open Sans Condensed', sans-serif;
-    color: #7CC473;
+    /*color: #7CC473;*/
+    color: #FFD37E;
     font-size: 50px;
     padding: 20px 0px;
     /*padding-bottom: 50px;*/
@@ -443,10 +527,6 @@ section h3{
 
 
 @media screen and (max-width: 550px) {
-
-    .section4{
-        height: 1200px;
-    }
     .work-panel{
         margin-bottom: 0px auto 50px auto;
         left: 0;
@@ -562,19 +642,24 @@ svg .st1 {
 /*FOR SMALLER OR MOBILE VIEW*/
 @media screen and (max-width: 440px) {
   .section1{
-     height: 700px;
+      height: 700px;
   }
   .section2{
-        height: 1200px;
+      height: 1200px;
   }
   .section3{
-    height: 1000px;
+      height: 1300px;
   }
+  .section5{
+      height: 1400px;
+  }
+
   .section4{
-    height: 1400px;
+      height: 1500px;
   }
+
   .section6{
-    height: 500px;
+      height: 500px;
   }
 }
 
@@ -585,12 +670,11 @@ svg .st1 {
   .section2{
         height: 1200px;
   }
-
   .section3{
     height: 800px;
   }
   .section4{
-    height: 1200px;
+    height: 1400px;
   }
   .section6{
     height: 500px;
