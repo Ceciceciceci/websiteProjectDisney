@@ -58,11 +58,12 @@
             <!--sidebar start-->
             <div id="sideNav">
                 <!-- sidebar menu start-->
-                <h3>DASHBOARD</h3>
+                <h4>DASHBOARD</h4>
+                <!-- &nbsp;DASHBOARD -->
                 <ul class="link-main">
                     <li class="activelink">
                         <a href="datasetreport.html">
-                            <i class="fa fa-dashboard" style="color: #F2F2F2; font-size: 12px;"></i> &nbsp;<span>HOME</span>
+                            <i class="fa fa-home" style="color: #F2F2F2; font-size: 12px;"></i> &nbsp;<span>HOME</span>
                         </a>
                     </li>
                     <li>
@@ -79,17 +80,18 @@
 
                 <!--Calendar-->
                 <div id="calendar" class="calendar-panel">
-                  <div class="month">
-                      <ul>
-                          <li class="btn prev">&#10094;</li>
-                          <li class="btn next">&#10095;</li>
-                          <li>
-                              April<br>
-                              <span style="font-size:12px">2017</span>
-                          </li>
-                      </ul>
+                      <div class="month">
+                        <ul>
+                            <li class="btn prev">&#10094;</li>
+                            <li class="btn next">&#10095;</li>
+                            <li>
+                                April<br>
+                                <span style="font-size:12px">2017</span>
+                            </li>
+                        </ul>
                       </div>
-
+                      <!-- <div></div> -->
+                      <!-- <hr> -->
                       <ul class="weekdays">
                           <li>Mo</li>
                           <li>Tu</li>
@@ -144,19 +146,36 @@
             <!--main content start-->
             <section id="main-content">
                 <!-- <section class="wrapper"> -->
-                  <div class="blank-panel col-md-3"></div>
-                  <div class="graph-panel col-md-9">
-                        <div class="panel1 col-md-10"></div>
-                        <div class="graph1 col-md-5"><canvas id="myChart" width="75" height="70"></canvas></div>
-                        <div class="graph2 col-md-5"><canvas id="myChart2" width="75" height="70"></canvas></div>
+                  <div class="blank-panel col-md-2"></div>
+                  <div class="tables-panel col-md-10">
+                        <div class="panel1 col-md-12">
+                            <p>Total Sales</p>
+                            <p>for year</p>
+                            <p>for the quarter</p>
+                            <p></p>
+                        </div>
+
+                        <div class="graph1 col-md-6">
+                            <canvas id="myChart" width="80" height="70"></canvas>
+                            <div id="legendDiv"></div>
+                        </div>
+                        <div class="graph2 col-md-6">
+                            <canvas id="myChart2" width="80" height="70"></canvas>
+                            <div id="legendDiv2"></div>
+                        </div>
+
+                        <!--Move this to sep js file-->
                           <script>
-                          var ctx = document.getElementById("myChart");
+                          var ctx = document.getElementById("myChart")
+                          var dataset2013q1 = [14013,24149,23409,22486];
+                          var dataset2013q2 = [14013, 24149,23,409,18383];
                           var myChart = new Chart(ctx, {
                               type: 'bar',
                               data: {
+                                  label: '# of Votes',
                                   labels: ["JOHN", "LEO", "PAUL", "GEORGE", "RINGO"],
                                   datasets: [{
-                                      label: '# of Votes',
+                                      // label: '# of Votes',
                                       data: [10, 20, 15, 5, 25],
                                       backgroundColor: [
                                           '#DFE10D',
@@ -169,6 +188,15 @@
                                   }],
                               },
                               options: {
+                                  legend: {
+                                     display: true,
+                                     labels: {
+                                         fontColor: '#2E2E2E',
+                                         fontFamily: "Open Sans",
+                                         fontSize: 12,
+                                         boxWidth: 10,
+                                     }
+                                  }, //end of legends
                                   scales: {
                                       xAxes: [{
                                           gridLines: {
@@ -186,7 +214,7 @@
                                               fontSize: 12
                                           }
                                       }]
-                                  }
+                                  } //end of scales
                               }
                           });
 
@@ -209,6 +237,15 @@
                                   }],
                               },
                               options: {
+                                legend: {
+                                   display: true,
+                                   labels: {
+                                       fontColor: '#2E2E2E',
+                                       fontFamily: "Open Sans",
+                                       fontSize: 12,
+                                       boxWidth: 10,
+                                   }
+                                }, //end of legends
                                   scales: {
                                       xAxes: [{
                                           gridLines: {

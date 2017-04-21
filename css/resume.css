@@ -185,18 +185,18 @@ section h3{
     background-color: #FDF8E2;
 }
 
-/*Project*/
-.section4{
-    height: 800px;
-    background-color: #FFFFFF;
-}
-
 /*Skill*/
-.section5{
+.section4{
     height: 900px;
     position:relative;
     margin:0 auto;
     overflow:hidden;
+}
+
+/*Project*/
+.section5{
+    height: 800px;
+    background-color: #FFFFFF;
 }
 
 /*Contact*/
@@ -215,14 +215,14 @@ section h3{
         height: 1200px;
     }
     .section3{
-        height: 1300px;
+        height: 1000px;
     }
-    .section5{
-        height: 1200px;
+    .section4{
+        height: 1000px;
     }
 
-    .section4{
-        height: 1300px;
+    .section5{
+        height: 1200px;
     }
 
     .section6{
@@ -230,7 +230,7 @@ section h3{
     }
 }
 
-@media screen and (min-width: 440px) and (max-width: 770px) {
+@media screen and (min-width: 440px) and (max-width: 775px) {
     .section1{
        height: 700px;
     }
@@ -238,9 +238,13 @@ section h3{
           height: 1200px;
     }
     .section3{
-      height: 1000px;
+      height: 900px;
     }
     .section4{
+        height: 900px;
+    }
+
+    .section5{
       height: 1400px;
     }
     .section6{
@@ -248,12 +252,15 @@ section h3{
     }
 }
 
-@media screen and (min-width: 775px) and (max-width: 991px) {
+@media screen and (min-width: 775px) and (max-width: 1000px) {
     .section3{
       height: 900px;
     }
 
     .section4{
+        height: 850px;
+    }
+    .section5{
       height: 800px;
     }
 }
@@ -467,16 +474,10 @@ section h3{
     }
 }
 
-@media screen and (max-width: 550px) {
-    .section3{
-        height: 1300px;
-    }
-}
-
 /**********************************/
 /************* SKILLS *************/
 /**********************************/
-.section5:after{
+.section4:after{
     content:'';
     position:absolute;
     left:55%; top:200px;
@@ -486,7 +487,7 @@ section h3{
     box-shadow: 0px 0px 0px 2000px #FFFFFF;
 }
 
-.section5 h3{
+.section4 h3{
     font-family: 'Open Sans Condensed', sans-serif;
     color: #7CC473;
     font-size: 50px;
@@ -494,7 +495,7 @@ section h3{
     text-align: center;
 }
 
-.section5 dark-line{
+.section4 dark-line{
     padding-bottom: 15px;
 }
 
@@ -610,12 +611,12 @@ section h3{
 
 }
 
-@media screen and (min-width: 300px) and (max-width: 770px) {
-    .section5:after{
+@media screen and (min-width: 300px) and (max-width: 780px) {
+    .section4:after{
         content:'';
         position:absolute;
-        left:55%; top:200px;
-        border-radius:0%;
+        left:0; top:0;
+        border-radius:0;
         height:0px;
         width:0px;
     }
@@ -624,7 +625,7 @@ section h3{
 /**********************************/
 /*********** PROJECTS *************/
 /**********************************/
-.section4 h3{
+.section5 h3{
     font-family: 'Open Sans Condensed', sans-serif;
     color: #7CC473;
     font-size: 50px;
@@ -633,28 +634,28 @@ section h3{
 }
 
 /*overridebootstrap*/
-.section4 .nav {
+.section5 .nav {
     background-color: #FFFFFF !important;
 }
 
-.section4 .nav>li>a {
+.section5 .nav>li>a {
     background-color: #FFFFFF !important;
     color:  #2E2E2E;
 }
 
-.section4 .nav li a:hover{
+.section5 .nav li a:hover{
     color: #7CC473;
 
 }
 
-.section4 .projheader{
+.section5 .projheader{
     color: #7CC473;
     font-size: 25px;
     text-align: left;
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
-.section4 .projheader p li{
+.section5 .projheader p li{
     font-size: 10px;
 }
 
