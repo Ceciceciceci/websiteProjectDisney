@@ -6,7 +6,7 @@
       <meta name="description" content="Data Center for Sales.">
       <meta name="author" content="Cecilia Tran">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet">
+      <!-- <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet"> -->
 
       <!--stylesheets-->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -58,7 +58,7 @@
             <!--sidebar start-->
             <div id="sideNav">
                 <!-- sidebar menu start-->
-                <h4>DASHBOARD</h4>
+                <h4>DASHBOARD  <i class="fa fa-bars pull-right" style="color: #F2F2F2; font-size: 20px; margin-right:10px;"></i> </h4>
                 <!-- &nbsp;DASHBOARD -->
                 <ul class="link-main">
                     <li class="activelink">
@@ -73,7 +73,7 @@
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fa fa-pencil" style="color: #F2F2F2; font-size: 12px;"></i> &nbsp;<span>EDIT</span>
+                            <i class="fa fa-user-circle" style="color: #F2F2F2; font-size: 12px;"></i> &nbsp;<span>PEOPLE</span>
                         </a>
                     </li>
                 </ul>
@@ -123,14 +123,14 @@
                           <li>18</li>
                           <li>19</li>
                           <li>20</li>
-                          <li>21</li>
+                          <li><span class="active">21</span></li>
                           <li>22</li>
                           <li>23</li>
                           <li>24</li>
                           <li>25</li>
                           <li>26</li>
                           <li>27</li>
-                          <li><span class="active">28</span></li>
+                          <li>28</li>
                           <li>29</li>
                           <li>30</li>
                       </ul>
@@ -149,10 +149,20 @@
                   <div class="blank-panel col-md-2"></div>
                   <div class="tables-panel col-md-10">
                         <div class="panel1 col-md-12">
-                            <p>Total Sales</p>
-                            <p>for year</p>
-                            <p>for the quarter</p>
-                            <p></p>
+                            <h2 class="col-md-12 col-sm-12 col-xs-12">Total Sales: <b>$<span id="total-sales"></span></b></h2>
+                            <div class="col-md-12 col-sm-12 col-xs-12 custom-line"></div>
+                            <div class="col-md-2 col-sm-4">
+                                <p class="year"><b>Year</b></p>
+                                <h1>2013</h1>
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                                <p class="quarter"><b>Quarter</b></p>
+                                <h1>01</h1>
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                                <p class="region"><b>Region</b></p>
+                                <h1>SW</h1>
+                            </div>
                         </div>
 
                         <div class="graph1 col-md-6">
@@ -163,110 +173,6 @@
                             <canvas id="myChart2" width="80" height="70"></canvas>
                             <div id="legendDiv2"></div>
                         </div>
-
-                        <!--Move this to sep js file-->
-                          <script>
-                          var ctx = document.getElementById("myChart")
-                          var dataset2013q1 = [14013,24149,23409,22486];
-                          var dataset2013q2 = [14013, 24149,23,409,18383];
-                          var myChart = new Chart(ctx, {
-                              type: 'bar',
-                              data: {
-                                  label: '# of Votes',
-                                  labels: ["JOHN", "LEO", "PAUL", "GEORGE", "RINGO"],
-                                  datasets: [{
-                                      // label: '# of Votes',
-                                      data: [10, 20, 15, 5, 25],
-                                      backgroundColor: [
-                                          '#DFE10D',
-                                          '#E8620C',
-                                          '#40B9A4',
-                                          '#202E4A',
-                                          '#E6E4E2'
-                                      ],
-                                      borderWidth: 0,
-                                  }],
-                              },
-                              options: {
-                                  legend: {
-                                     display: true,
-                                     labels: {
-                                         fontColor: '#2E2E2E',
-                                         fontFamily: "Open Sans",
-                                         fontSize: 12,
-                                         boxWidth: 10,
-                                     }
-                                  }, //end of legends
-                                  scales: {
-                                      xAxes: [{
-                                          gridLines: {
-                                            display: false
-                                          },
-                                          ticks: {
-                                            fontFamily: "Open Sans",
-                                            fontSize: 12
-                                          }
-                                      }],
-                                      yAxes: [{
-                                          ticks: {
-                                              beginAtZero:true,
-                                              fontFamily: "Open Sans",
-                                              fontSize: 12
-                                          }
-                                      }]
-                                  } //end of scales
-                              }
-                          });
-
-                          var ctx2 = document.getElementById("myChart2");
-                          var myChart = new Chart(ctx2, {
-                              type: 'bar',
-                              data: {
-                                  labels: ["LEO", "DONA", "PAUL", "MICHAEL", "RAPHAEL"],
-                                  datasets: [{
-                                      label: '# of Votes',
-                                      data: [10, 20, 15, 5, 25],
-                                      backgroundColor: [
-                                          '#DFE10D',
-                                          '#E8620C',
-                                          '#40B9A4',
-                                          '#202E4A',
-                                          '#E6E4E2'
-                                      ],
-                                      borderWidth: 0,
-                                  }],
-                              },
-                              options: {
-                                legend: {
-                                   display: true,
-                                   labels: {
-                                       fontColor: '#2E2E2E',
-                                       fontFamily: "Open Sans",
-                                       fontSize: 12,
-                                       boxWidth: 10,
-                                   }
-                                }, //end of legends
-                                  scales: {
-                                      xAxes: [{
-                                          gridLines: {
-                                            display: false
-                                          },
-                                          ticks: {
-                                            fontFamily: "Open Sans",
-                                            fontSize: 12
-                                          }
-                                      }],
-                                      yAxes: [{
-                                          ticks: {
-                                              beginAtZero:true,
-                                              fontFamily: "Open Sans",
-                                              fontSize: 12
-                                          }
-                                      }]
-                                  }
-                              }
-                          });
-                          </script>
                   </div>
                   <!-- <div class="graph2">Graph 2</div>
                   <div class="graph3">Graph 3</div>
@@ -280,4 +186,5 @@
             </section>
 
     </body>
+    <script src="js/graph.js"></script>
 </html>
