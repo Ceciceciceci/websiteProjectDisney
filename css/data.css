@@ -31,6 +31,12 @@ header{
     border-width: 0px 0px 2px 0px;
 }
 
+header li{
+    display: inline-block;
+    margin-left: 250px;
+    margin-top: 15px;
+}
+
 #container {
     height: 100%;
     width: 100%;
