@@ -1,8 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,700');
-/*font-family: 'Open Sans Condensed', sans-serif;*/
-/*font-family: 'Open Sans', sans-serif;*/
-
+@import url('https://fonts.googleapis.com/css?family=Ruda');
 /************* GENERAL *************/
 html {
     font-family: sans-serif;
@@ -13,28 +11,10 @@ html {
 body {
     margin: 0;
     padding: 0px !important;
-    font-size:12px;
+    font-size: 12px;
     font-family: 'Open Sans', sans-serif;
     color: #2E2E2E;
-    position: fixed;
     z-index: -1;
-}
-
-header{
-    position: fixed;
-    z-index: -1;
-    background-color: #FFFFFF;
-    height: 50px;
-    width: 100%;
-    border-style: solid;
-    border-color: #E6E4E2;
-    border-width: 0px 0px 2px 0px;
-}
-
-header li{
-    display: inline-block;
-    margin-left: 250px;
-    margin-top: 15px;
 }
 
 #container {
@@ -42,33 +22,114 @@ header li{
     width: 100%;
 }
 
-/*sidebar navigation*/
+/*Header bar*/
+header{
+    position: fixed;
+    z-index: 3;
+    background-color: #FFFFFF;
+    height: 50px;
+    width: 100%;
+    box-shadow: 1px 2px 3px 1px #E6E4E2;
+    /*border-style: solid;
+    border-color: #E6E4E2;
+    border-width: 0px 0px 2px 0px;*/
+}
+
+header li{
+    margin-left: 275px;
+    color: #2E2E2E;
+}
+
+header .username{
+    padding: 16px 0px 16px 0px;
+}
+
+header .logout{
+    padding:0px 5px 0px 5px;
+    text-align: center;
+    width: 150px;
+    cursor: pointer;
+}
+
+header .logout a{
+    background-color: #E8620C;
+    color: #F2F2F2;
+    text-decoration: none;
+}
+
+header .logout a:hover{
+    color: #E8620C;
+    background-color: #F2F2F2;
+}
+
+.dropdown-menu li{
+    margin: 5px;
+    padding:0px;
+    width: 150px;
+}
+/*End of Header bar configs*/
+
+/*Sidebar Nav*/
 #sideNav {
     width: 250px;
     height: 100%;
     position: fixed;
+    z-index: 5;
     background: #202E4A;
+    color: #F2F2F2;
 }
 
-#sideNav h4 {
-	color: #F2F2F2;
-	font-weight: 700;
-  margin-bottom: 15px;
-}
-
-#sideNav .link-main ul{
-   width: 100%;
-   margin-top: 20px;
-}
-
-#sideNav .link-main ul li {
-    position: relative;
-    background-color: #2A3650;
-    margin: 0 auto;
+#sideNav h3{
+    margin-top: 20px;
+    color: #F2F2F2;
+    font-weight: 700;
     text-align: center;
+    margin-bottom: 25px;
 }
 
+.link-main {
+    list-style-type: none;
+    padding-left: 20px;
+    /*padding-right: 20px;*/
+    width: 100%;
+    text-decoration: none;
+}
 
+.link-main li{
+    height: 40px;
+    margin-bottom:10px;
+    border-radius: 3px 0px 0px 3px;
+    padding: 10px 0px 15px 0px;
+}
+
+.link-main li a{
+    color: #F2F2F2;
+    border-radius: 2px;
+    margin-left: 65px;
+}
+
+.link-main li:hover{
+    background-color: #1abc9c;
+    -webkit-transition: opacity 3s ease-in-out;
+    -moz-transition: opacity 3s ease-in-out;
+    -ms-transition: opacity 3s ease-in-out;
+    -o-transition: opacity 3s ease-in-out;
+     opacity: 1;
+}
+
+.activelink{
+    background-color: #1abc9c;
+}
+
+.link-main a:hover{
+  color: #2E2E2E;
+  text-decoration: none;
+  border-radius: 2px 0px 0px 0px;
+}
+
+/*End of Sidebar Nav*/
+
+/*Calendar*/
 .calendar-panel{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -81,19 +142,15 @@ header li{
     list-style-type: none;
 }
 
-/* Month header */
 .month {
     padding-right: 10px;
     width: 100%;
     text-align: center;
 }
-
-/* Month list */
 .month ul {
     margin-left: 15px;
     padding: 0;
 }
-
 .month ul li {
     color: white;
     font-size: 20px;
@@ -101,54 +158,88 @@ header li{
     letter-spacing: 4px;
 }
 
-/* Previous button inside month header */
+/*Arrows inside month header */
 .month .prev {
+    color: #F2F2F2;
     float: left;
     padding-top: 10px;
 }
-
-/* Next button */
 .month .next {
     float: right;
     padding-top: 10px;
 }
 
-/* Weekdays (Mon-Sun) */
+/* Weekdays Label*/
 .weekdays {
-    margin-left: 15px;
-    padding: 5px 0;
+    /*margin-left: 1px;*/
+    /*margin: 0 auto;*/
+    padding: 0px 0px 0px 20px;
 }
-
 .weekdays li {
     display: inline-block;
-    width: 11.5%;
+    width: 12%;
     color: #F2F2F2;
     text-align: center;
 }
-
-/* Days (1-31) */
+/*Number days*/
 .days {
-    margin-left: 15px;
-    padding: 10px 0;
+    /*margin-left: 1px;*/
+    padding: 0px 0px 0px 20px;
 }
-
 .days li {
     display: inline-block;
-    width: 11.5%;
+    width: 12%;
     text-align: center;
     margin-bottom: 5px;
     font-size:12px;
-    color:#777;
+    color: #858585;
 }
 
 .days li:first-child{
-    margin-left: 150px;
+    margin-left: 154px;
 }
 
 /* Highlight the "current" day */
+/* Write JQuery for this later to select the date and mark it active*/
 .days li .active {
-    padding: 4px;
-    background: #1abc9c;
+    padding: 2px 4px 2px 4px;
+    background-color: #1ABC9C;
     color: white !important;
     border-radius: 100%;
+}
+/*End of Calendar*/
+
+/**************************************/
+/*************BODY SECTION*************/
+/**************************************/
+#main-content{
+  /*position: absolute;*/
+  z-index:1;
+}
+
+.panel1{
+    background-color: #F2F2F2;
+    height: 200px;
+    width: 90%;
+    margin-bottom: 25px;
+    left: -5px;
+    box-shadow: 1px 5px 5px 1px #E6E4E2;
+}
+
+.graph-panel{
+    margin-top: 75px;
+    margin-bottom: 50px;
+}
+
+.graph1{
+  left: 5px;
+  padding: 25px;
+    margin-right: 50px;
+  box-shadow: 1px 5px 5px 1px #E6E4E2;
+}
+
+.graph2{
+  left: -5px;
+  padding: 25px;
+  box-shadow: 1px 5px 5px 1px #E6E4E2;
 }

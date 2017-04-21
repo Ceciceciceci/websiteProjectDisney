@@ -31,9 +31,21 @@
             <!--header start-->
             <header class="header white">
                 <div class="nav-bar" id="top_bar">
-                    <ul>
-                        <li class="username"><p>Welcome, US Sales Manager</p></li>
-                        <li class="logout pull-right">Logout</li>
+                    <ul class="nav navbar-nav">
+                        <li class="username">Welcome  <b>Manager</b></li>
+                        <li class="dropdown sort">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">SORT BY:
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">YEAR</a></li>
+                              <li><a href="#">QUARTER</a></li>
+                              <li><a href="#">REGION</a></li>
+                            </ul>
+                        </li> <!--dropdown-->
+                        <!-- <li class="logout pull-right">LOGOUT</li> -->
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="logout pull-right"><a></span>LOG OUT</a></li>
                     </ul>
                 </div>
             </header>
@@ -44,14 +56,23 @@
                         (Sales categories: dashboard, etc.)
             ****************************************-->
             <!--sidebar start-->
-            <div id="sideNav"  class="nav-collapse">
+            <div id="sideNav">
                 <!-- sidebar menu start-->
-                <ul class="sideNav-menu">
-                    <h4>Dashboard</h4>
-                    <li class="link-main">
-                        <a class="active" href="datasetreport.html">
-                            <i class="fa fa-dashboard fa-5x" style="color: #F2F2F2;"></i><br>
-                            <span>Dashboard</span>
+                <h3>DASHBOARD</h3>
+                <ul class="link-main">
+                    <li class="activelink">
+                        <a href="datasetreport.html">
+                            <i class="fa fa-dashboard" style="color: #F2F2F2; font-size: 12px;"></i> &nbsp;<span>HOME</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-database" style="color: #F2F2F2; font-size: 12px;"></i> &nbsp;<span>DESCRIPTION</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-pencil" style="color: #F2F2F2; font-size: 12px;"></i> &nbsp;<span>EDIT</span>
                         </a>
                     </li>
                 </ul>
@@ -60,8 +81,8 @@
                 <div id="calendar" class="calendar-panel">
                   <div class="month">
                       <ul>
-                          <li class="prev">&#10094;</li>
-                          <li class="next">&#10095;</li>
+                          <li class="btn prev">&#10094;</li>
+                          <li class="btn next">&#10095;</li>
                           <li>
                               April<br>
                               <span style="font-size:12px">2017</span>
@@ -106,8 +127,8 @@
                           <li>24</li>
                           <li>25</li>
                           <li>26</li>
-                          <li><span class="active">27</span></li>
-                          <li>28</li>
+                          <li>27</li>
+                          <li><span class="active">28</span></li>
                           <li>29</li>
                           <li>30</li>
                       </ul>
@@ -123,42 +144,86 @@
             <!--main content start-->
             <section id="main-content">
                 <!-- <section class="wrapper"> -->
-                  <div class="main-panel"></div>
-                  <div class="graph1">Graph 1
-                          <canvas id="myChart" width="400" height="400"></canvas>
+                  <div class="blank-panel col-md-3"></div>
+                  <div class="graph-panel col-md-9">
+                        <div class="panel1 col-md-10"></div>
+                        <div class="graph1 col-md-5"><canvas id="myChart" width="75" height="70"></canvas></div>
+                        <div class="graph2 col-md-5"><canvas id="myChart2" width="75" height="70"></canvas></div>
                           <script>
                           var ctx = document.getElementById("myChart");
                           var myChart = new Chart(ctx, {
                               type: 'bar',
                               data: {
-                                  labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                                  labels: ["JOHN", "LEO", "PAUL", "GEORGE", "RINGO"],
                                   datasets: [{
                                       label: '# of Votes',
-                                      data: [12, 19, 3, 5, 2, 3],
+                                      data: [10, 20, 15, 5, 25],
                                       backgroundColor: [
-                                          'rgba(255, 99, 132, 0.2)',
-                                          'rgba(54, 162, 235, 0.2)',
-                                          'rgba(255, 206, 86, 0.2)',
-                                          'rgba(75, 192, 192, 0.2)',
-                                          'rgba(153, 102, 255, 0.2)',
-                                          'rgba(255, 159, 64, 0.2)'
+                                          '#DFE10D',
+                                          '#E8620C',
+                                          '#40B9A4',
+                                          '#202E4A',
+                                          '#E6E4E2'
                                       ],
-                                      borderColor: [
-                                          'rgba(255,99,132,1)',
-                                          'rgba(54, 162, 235, 1)',
-                                          'rgba(255, 206, 86, 1)',
-                                          'rgba(75, 192, 192, 1)',
-                                          'rgba(153, 102, 255, 1)',
-                                          'rgba(255, 159, 64, 1)'
-                                      ],
-                                      borderWidth: 1
-                                  }]
+                                      borderWidth: 0,
+                                  }],
                               },
                               options: {
                                   scales: {
+                                      xAxes: [{
+                                          gridLines: {
+                                            display: false
+                                          },
+                                          ticks: {
+                                            fontFamily: "Open Sans",
+                                            fontSize: 12
+                                          }
+                                      }],
                                       yAxes: [{
                                           ticks: {
-                                              beginAtZero:true
+                                              beginAtZero:true,
+                                              fontFamily: "Open Sans",
+                                              fontSize: 12
+                                          }
+                                      }]
+                                  }
+                              }
+                          });
+
+                          var ctx2 = document.getElementById("myChart2");
+                          var myChart = new Chart(ctx2, {
+                              type: 'bar',
+                              data: {
+                                  labels: ["LEO", "DONA", "PAUL", "MICHAEL", "RAPHAEL"],
+                                  datasets: [{
+                                      label: '# of Votes',
+                                      data: [10, 20, 15, 5, 25],
+                                      backgroundColor: [
+                                          '#DFE10D',
+                                          '#E8620C',
+                                          '#40B9A4',
+                                          '#202E4A',
+                                          '#E6E4E2'
+                                      ],
+                                      borderWidth: 0,
+                                  }],
+                              },
+                              options: {
+                                  scales: {
+                                      xAxes: [{
+                                          gridLines: {
+                                            display: false
+                                          },
+                                          ticks: {
+                                            fontFamily: "Open Sans",
+                                            fontSize: 12
+                                          }
+                                      }],
+                                      yAxes: [{
+                                          ticks: {
+                                              beginAtZero:true,
+                                              fontFamily: "Open Sans",
+                                              fontSize: 12
                                           }
                                       }]
                                   }
@@ -166,12 +231,12 @@
                           });
                           </script>
                   </div>
-                  <div class="graph2">Graph 2</div>
+                  <!-- <div class="graph2">Graph 2</div>
                   <div class="graph3">Graph 3</div>
                   <div class="graph4">Graph 4</div>
                   <div class="graph5">Graph 5</div>
                   <div class="graph6">Graph 6</div>
-                  <div class="graph7">Graph 7</div>
+                  <div class="graph7">Graph 7</div> -->
 
                   <!-- <graph> -->
                 <!-- </section> -->
