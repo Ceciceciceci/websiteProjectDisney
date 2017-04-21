@@ -1,6 +1,5 @@
-<!-- https://github.com/d3/d3/wiki/Tutorials -->
 <!DOCTYPE html>
-<html class="layout-home">
+<html class="datacenter">
     <head>
       <meta charset="utf-8">
       <title>Part Two: Sales Data</title>
@@ -18,27 +17,125 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
       <script src="https://use.fontawesome.com/7ef29430c8.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
       <script src="js/data.js"></script>
     </head>
 
     <body>
-        <!-- side nav z-index : 10-->
-        <div class="side-nav col-md-3">
-          <ul class="nav_links">
-            <li><a class="active" href="#desc">A B O U T</a></li>
-            <li><a href="#exp">E X P E R I E N C E</a></li>
-            <li><a href="#skills">S K I L L S</a></li>
-            <li><a href="#proj">P R O J E C T S</a></li>
-            <li><a href="#cont">C O N T A C T</a></li>
-          </ul>
-        </div>
-        <div class="top-bar col-md-12"></div>
-        <!-- center portion z-index -1-->
-        <!-- 4 panels per view -->
-        <section>
+        <section id="container">
+            <!-- *************************************
+              HEAD BAR (MAY NOT NEED BASED ON INFO GIVEN)
+              includes logout, sort, change view, and (alerts?)
+            ******************************************-->
+            <!--header start-->
+            <header class="header black-bg">
+                <a href="index.html" class="title"><b>Dashboard</b></a>
+                <div class="nav-bar" id="top_bar">
+                    <li><h5 class="username">Welcome, US Sales Manager</h5></li>
+                    <ul>
 
-        </section>
+                    </ul>
+                </div>
+            </header>
+            <!--header end-->
+
+            <!-- ***********************************
+                        MAIN SIDEBAR MENU
+                        (Sales categories: dashboard, etc.)
+            ****************************************-->
+            <!--sidebar start-->
+            <div id="sideNav"  class="nav-collapse">
+                <!-- sidebar menu start-->
+                <ul class="sideNav-menu">
+                    <h4>Dashboard</h4>
+                    <li class="link-main">
+                        <a class="active" href="datasetreport.html">
+                            <i class="fa fa-dashboard fa-5x" style="color: #F2F2F2;"></i><br>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!--Calendar-->
+                <div id="calendar" class="calendar-panel">
+                  <div class="month">
+                      <ul>
+                          <li class="prev">&#10094;</li>
+                          <li class="next">&#10095;</li>
+                          <li>
+                              April<br>
+                              <span style="font-size:12px">2017</span>
+                          </li>
+                      </ul>
+                      </div>
+
+                      <ul class="weekdays">
+                          <li>Mo</li>
+                          <li>Tu</li>
+                          <li>We</li>
+                          <li>Th</li>
+                          <li>Fr</li>
+                          <li>Sa</li>
+                          <li>Su</li>
+                      </ul>
+
+                      <ul class="days">
+                          <li>1</li>
+                          <li>2</li>
+                          <li>3</li>
+                          <li>4</li>
+                          <li>5</li>
+                          <li>6</li>
+                          <li>7</li>
+                          <li>8</li>
+                          <li>9</li>
+                          <li>10</li>
+                          <li>11</li>
+                          <li>12</li>
+                          <li>13</li>
+                          <li>14</li>
+                          <li>15</li>
+                          <li>16</li>
+                          <li>17</li>
+                          <li>18</li>
+                          <li>19</li>
+                          <li>20</li>
+                          <li>21</li>
+                          <li>22</li>
+                          <li>23</li>
+                          <li>24</li>
+                          <li>25</li>
+                          <li>26</li>
+                          <li><span class="active">27</span></li>
+                          <li>28</li>
+                          <li>29</li>
+                          <li>30</li>
+                      </ul>
+
+                </div>
+            </div>
+            <!--sidebar end-->
+
+            <!-- ********************************
+                        MAIN CONTENT
+                        includes the graphs
+            ************************************* -->
+            <!--main content start-->
+            <section id="main-content">
+                <section class="wrapper">
+                  <div class="main-panel"></div>
+                  <div class="graph1">Graph 1</div>
+                  <div class="graph2">Graph 2</div>
+                  <div class="graph3">Graph 3</div>
+                  <div class="graph4">Graph 4</div>
+                  <div class="graph5">Graph 5</div>
+                  <div class="graph6">Graph 6</div>
+                  <div class="graph7">Graph 7</div>
+
+                  <!-- <graph> -->
+                </section>
+            </section>
+
     </body>
-
-
 </html>
