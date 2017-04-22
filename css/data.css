@@ -30,9 +30,6 @@ header{
     height: 50px;
     width: 100%;
     box-shadow: 1px 2px 3px 1px #E6E4E2;
-    /*border-style: solid;
-    border-color: #E6E4E2;
-    border-width: 0px 0px 2px 0px;*/
 }
 
 header li{
@@ -253,11 +250,26 @@ header .logout a:hover{
     height: 0.5px;
     margin-top: 5px;
     margin-bottom:20px;
-
     background-color: #2E2E2E;
     opacity:0.1;
 }
 
+#total-sales{
+  -webkit-animation: opacityscale 2s infinite; /* Safari 4+ */
+   -moz-animation:   opacityscale 2s infinite; /* Fx 5+ */
+   -o-animation:     opacityscale 2s infinite; /* Opera 12+ */
+   animation:        opacityscale 2s infinite;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+}
+
+@keyframes opacityscale {
+  0% {opacity:0;}
+  30%{opacity:0.7;}
+  100% {opacity:1;}
+}
+
+/*dropdown menus*/
 .year{
     color: #E8620C;
 }
@@ -266,6 +278,11 @@ header .logout a:hover{
 }
 .region{
     color: #DFE10D;
+}
+
+select {
+  border: 0;
+  font: 32px 'Open Sans';
 }
 
 .graph1{
