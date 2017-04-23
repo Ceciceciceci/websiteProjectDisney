@@ -1,6 +1,5 @@
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,700');
-@import url('https://fonts.googleapis.com/css?family=Ruda');
 /************* GENERAL *************/
 html {
     font-family: sans-serif;
@@ -76,13 +75,17 @@ header .logout a:hover{
     color: #F2F2F2;
 }
 
+.hide{
+
+}
+
 #sideNav h4{
     color: #F2F2F2;
     font-weight: 700;
     margin: 0 auto;
     text-align: center;
     padding-top: 15px;
-    padding-left: 30px;
+    padding-left: 5px;
     width: 100%;
     height: 50px;
     margin-bottom: 17px;
@@ -92,7 +95,6 @@ header .logout a:hover{
 .link-main {
     list-style-type: none;
     padding-left: 20px;
-    /*padding-right: 20px;*/
     width: 100%;
     text-decoration: none;
 }
@@ -135,7 +137,6 @@ header .logout a:hover{
   text-decoration: none;
   border-radius: 2px 0px 0px 0px;
 }
-
 /*End of Sidebar Nav*/
 
 /*Calendar*/
@@ -254,6 +255,49 @@ header .logout a:hover{
     opacity:0.1;
 }
 
+.panel2{
+    background-color: #FFFFFF;
+    height: 100%;
+    width: 95%;
+    margin: 0;
+    left: 45px;
+    /*padding: 25px 0px 25px 0px;*/
+    box-shadow: 1px 5px 5px 1px #E6E4E2;
+}
+
+.panel2 h3{
+    color: #202E4A;
+}
+
+.data-table{
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+
+#fullDataSetTable th{
+    font-size: 15px;
+    text-align: center;
+    background-color: #F2F2F2;
+}
+#fullDataSetTable td{
+    text-align: center;
+    width: 200px;
+    padding: 10px 0px 10px 0px;
+    background-image: linear-gradient(to right, #333333 40%, rgba(255, 255, 255, 0) 20%);
+    background-position: bottom;
+    background-size: 3px 1px;
+    background-repeat: repeat-x;
+}
+
+#fullDataSetTable tr:hover{
+    background-color: rgba(223,225,13, 0.2);
+    /*background-color: rgba(232,98,12, 0.3);*/
+}
+
+.print-button{
+   background-color: #DFE10D;
+}
+
 #total-sales{
   -webkit-animation: opacityscale 2s infinite; /* Safari 4+ */
    -moz-animation:   opacityscale 2s infinite; /* Fx 5+ */
@@ -269,7 +313,7 @@ header .logout a:hover{
   100% {opacity:1;}
 }
 
-/*dropdown menus*/
+/*dropdowns for top-panel panel 1*/
 .year{
     color: #E8620C;
 }
@@ -280,23 +324,67 @@ header .logout a:hover{
     color: #DFE10D;
 }
 
-select {
-  border: 0;
-  font: 32px 'Open Sans';
+.form-select {
+    width: 200px;
 }
 
-.graph1{
+.form-select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    height: 45px;
+    margin: 8px 0;
+    border: 0;
+    background: #F2F2F2;
+    font-family: 'Open Sans';
+    font-size: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.form-select2 select{
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    height: 35px;
+    margin: 8px 8px 10px 8px;
+    border: 0;
+    background: #F2F2F2;
+    font-size: 12px;
+    font-family: 'Open Sans';
+    cursor: pointer;
+
+}
+
+.graph1,.graph3{
   left: 45px;
-  width: 45%;
+  width: 47%;
   padding: 25px;
-  margin-right: 95px;
+  margin-right: 55px;
+  margin-bottom: 25px;
   background-color: #FFFFFF;
   box-shadow: 1px 5px 5px 1px #E6E4E2;
 }
 
-.graph2{
-  width: 45%;
+.graph2,.graph4{
+  width: 47%;
   padding: 25px;
+  margin-bottom: 25px;
   background-color: #FFFFFF;
   box-shadow: 1px 5px 5px 1px #E6E4E2;
+}
+
+/************* PEOPLE SECTION *************/
+.card{
+    background-color: #FFFFFF;
+    height: 325px;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    width: 220px;
+    left: 45px;
+    box-shadow: 1px 5px 5px 1px #E6E4E2;
+    text-align: center;
 }

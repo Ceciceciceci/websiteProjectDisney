@@ -6,7 +6,6 @@
       <meta name="description" content="Data Center for Sales.">
       <meta name="author" content="Cecilia Tran">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet"> -->
 
       <!--stylesheets-->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -17,7 +16,7 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
       <script src="https://use.fontawesome.com/7ef29430c8.js"></script>
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     </head>
 
@@ -47,7 +46,8 @@
             <!--sidebar start-->
             <div id="sideNav">
                 <!-- sidebar menu start-->
-                <h4>DASHBOARD  <i class="fa fa-bars pull-right" style="color: #F2F2F2; font-size: 20px; margin-right:10px;"></i> </h4>
+                <!-- <i class="fa fa-bars pull-right" style="color: #F2F2F2; font-size: 20px; margin-right:10px;"></i> -->
+                <h4>DASHBOARD</h4>
                 <!-- &nbsp;DASHBOARD -->
                 <ul class="link-main">
                     <li class="activelink">
@@ -56,12 +56,12 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="datasetreport.html">
                             <i class="fa fa-database" style="color: #F2F2F2; font-size: 12px;"></i> &nbsp;<span>DESCRIPTION</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="people.html">
                             <i class="fa fa-user-circle" style="color: #F2F2F2; font-size: 12px;"></i> &nbsp;<span>PEOPLE</span>
                         </a>
                     </li>
@@ -79,8 +79,6 @@
                             </li>
                         </ul>
                       </div>
-                      <!-- <div></div> -->
-                      <!-- <hr> -->
                       <ul class="weekdays">
                           <li>Mo</li>
                           <li>Tu</li>
@@ -112,8 +110,8 @@
                           <li>18</li>
                           <li>19</li>
                           <li>20</li>
-                          <li><span class="active">21</span></li>
-                          <li>22</li>
+                          <li>21</li>
+                          <li><span class="active">22</span></li>
                           <li>23</li>
                           <li>24</li>
                           <li>25</li>
@@ -134,59 +132,140 @@
             ************************************* -->
             <!--main content start-->
             <section id="main-content">
-                  <div class="blank-panel col-md-2"></div>
-                  <div class="tables-panel col-md-10">
-                        <div class="panel1 col-md-12">
+                  <div class="blank-panel col-md-2 col-sm-2"></div>
+                  <div class="tables-panel col-md-10 col-sm-10">
+                        <div class="panel1 col-md-12 col-sm-12">
                             <h2 class="col-md-12 col-sm-12 col-xs-12">Total Sales: <b>$<span id="total-sales"></span></b></h2>
                             <div class="col-md-12 col-sm-12 col-xs-12 custom-line"></div>
                             <div class="col-md-2 col-sm-4">
                                 <p class="year"><b>Year</b>&nbsp;&nbsp;<span class="caret"></span></a></p>
-                                <select class="yearDrop">
-                                    <option>2013</option>
-                                    <option>2014</option>
-                                </select>
+                                <div class="form-select">
+                                    <select class="yearDrop">
+                                        <option value="2013">2013</option>
+                                        <option value="2014">2014</option>
+                                        <option value="blank">none</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="col-md-2 col-sm-4">
                                 <p class="quarter"><b>Quarter</b>&nbsp;&nbsp;<span class="caret"></span></a></p>
-                                <select class="quarterDrop">
-                                    <option>01</option>
-                                    <option>02</option>
-                                    <option>03</option>
-                                    <option>04</option>
-                                </select>
+                                   <div class="form-select">
+                                      <select class="quarterDrop">
+                                          <option value="1">01</option>
+                                          <option value="2">02</option>
+                                          <option value="3">03</option>
+                                          <option value="4">04</option>
+                                          <option value="blank">none</option>
+                                      </select>
+                                  </div>
                             </div>
                             <div class="col-md-2 col-sm-4">
                                 <p class="region"><b>Region</b>&nbsp;&nbsp;<span class="caret"></span></a></p>
-                                <select class="quarterDrop">
-                                    <option>South West</option>
-                                    <option>North West</option>
-                                    <option>South East</option>
-                                    <option>North East</option>
-                                </select>
+                                   <div class="form-select">
+                                      <select class="regionDrop">
+                                          <option value="South West">South West</option>
+                                          <option value="North West">North West</option>
+                                          <option value="South East">South East</option>
+                                          <option value="North East">North East</option>
+                                          <option>none</option>
+                                      </select>
+                                  </div>
                             </div>
                         </div>
 
-                        <div class="graph1 col-md-6">
+                        <!--Decided on 4 main graphs -->
+                        <div class="graph1 col-md-6 col-sm-6">
+                            <div id="table-title"><h4>Quarter 1</h4>
+                                <div class="form-select2">
+                                  <select>Year
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                  </select>
+                                  <select>Region
+                                    <option value="South West">South West</option>
+                                    <option value="North West">North West</option>
+                                    <option value="South East">South East</option>
+                                    <option value="North East">North East</option>
+                                  </select>
+                                </div>
+                            </div>
                             <canvas id="myChart" width="80" height="70"></canvas>
-                            <div id="legendDiv"></div>
                         </div>
-                        <div class="graph2 col-md-6">
+                        <div class="graph2 col-md-6 col-sm-6">
+                            <div id="table-title"><h4>Quarter 2</h4>
+                                <div class="form-select2">
+                                  <select>Year
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                  </select>
+                                  <select>Region
+                                    <option value="South West">South West</option>
+                                    <option value="North West">North West</option>
+                                    <option value="South East">South East</option>
+                                    <option value="North East">North East</option>
+                                  </select>
+                                </div>
+                            </div>
                             <canvas id="myChart2" width="80" height="70"></canvas>
-                            <div id="legendDiv2"></div>
+                        </div>
+                        <div class="graph3 col-md-6 col-sm-6">
+                            <div id="table-title"><h4>Quarter 3</h4>
+                                <div class="form-select2">
+                                  <select>Year
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                  </select>
+                                  <select>Region
+                                    <option value="South West">South West</option>
+                                    <option value="North West">North West</option>
+                                    <option value="South East">South East</option>
+                                    <option value="North East">North East</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <canvas id="myChart3" width="80" height="70"></canvas>
+                        </div>
+                        <div class="graph4 col-md-6 col-sm-6">
+                            <div id="table-title"><h4>Quarter 4</h4>
+                                <div class="form-select2">
+                                  <select>Year
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                  </select>
+                                  <select>Region
+                                    <option value="South West">South West</option>
+                                    <option value="North West">North West</option>
+                                    <option value="South East">South East</option>
+                                    <option value="North East">North East</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <canvas id="myChart4" width="80" height="70"></canvas>
                         </div>
 
                         <!-- printable table of the data -->
-                        <div class="panel1 col-md-12">
-                            <button></button>
-                            <table>
-                                
-                            </table>
+                        <div class="panel2 col-md-12 col-sm-12">
+                            <div class="table-header col-md-2 col-sm-12">
+                                <h3>Full Table</h3><hr>
+                                <button class="btn print-button">Print Full Data</button>
+                            </div>
+                            <div class="data-table col-md-8 col-sm-12" id="data-table">
+                                <table class="col-md-12" id="fullDataSetTable">
+                                    <tr>
+                                        <th>Year</th>
+                                        <th>Quarter</th>
+                                        <th>Region</th>
+                                        <th>Regional Manager</th>
+                                        <th>Sales</th>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                   </div>
                   <!-- <graph> -->
             </section>
 
     </body>
-    <script src="js/graph.js"></script>
     <script src="js/data.js"></script>
+    <script src="js/graph.js"></script>
 </html>
