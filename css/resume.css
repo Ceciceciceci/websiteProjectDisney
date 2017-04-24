@@ -131,6 +131,7 @@ section h3{
     .nav_links{
         display:none;
     }
+
     .nav_links li {
         margin: 0 auto;
         display: block;
@@ -159,6 +160,7 @@ section h3{
         height: 250px;
         opacity: 1;
     }
+
     .fixed-navbar{
         top:40px;
     }
@@ -743,7 +745,6 @@ section h3{
 }
 
 .fa {
-    /*margin-top: 50px;*/
     color: #FFFFFF;
     padding: 20px 50px;
     text-align: center;
@@ -752,18 +753,19 @@ section h3{
     opacity: 0.8;
 }
 
-.section6 a{
+.icon-panel a{
     color: #FDF8E2;
     opacity: 0.8;
+    transition-property: font-size;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
 }
 
-.section6 .icon-panel a:hover{
-    -webkit-animation-name: hoverscale;
-    animation-name: hoverscale;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+.icon-panel a:hover{
+    text-decoration: none;
+    font-size: 15px;
 }
+
 
 .nextButton {
     background-color: #FDF8E2;
@@ -786,15 +788,15 @@ section h3{
     color:#2E2E2E;
 }
 .nextButton:active {
-    position:relative;
+    position:absolute;
     top:1px;
 }
 
 /* Responsive bit for other items in section 6 */
-@media screen and (max-width: 440px) {
-  .section6 .nextButton{
+@media screen and (min-width: 300px) and (max-width: 440px) {
+  .nextButton{
       margin-top: 30px;
-      font-size:15px;
+      font-size:50px;
       padding:19px 35px;
   }
   .nextButton:hover {

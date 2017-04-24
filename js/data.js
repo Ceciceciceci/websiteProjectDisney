@@ -108,15 +108,6 @@ var dataset = [
     //need two other conditions
 //add filter table option
 
-// var aRequest = new XMLHttpRequest();
-// aRequest.open('GET', 'dataset.json');
-// aRequest.onload = function(){
-//    console.log(aRequest.responseText);
-//    var aData = aRequest.responseText;
-//    var aData = JSON.parse(aRequest.responseText);
-// };
-// aRequest.send();
-
 //variables
 var salesArray=[];
 var label=[];
