@@ -29,4 +29,4 @@ A web page that displays the information in the data set in a meaningful way for
 <br>
 2.) For Page 2: Look for datasetreport.html and repeat step 1 or at the bottom of resume.html click the button.
 <br>
-3.) Thank you for taking the time to look!
+Thank you for taking the time to look!

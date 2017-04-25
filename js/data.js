@@ -1,3 +1,6 @@
+
+//JS File for datasetreport.html
+//Data set given to sort and graph
 var dataset = [
    {
      "year": 2013, "quarter": 1, "region": "South East", "regional_manager": "John", "sales": "14013.00"
@@ -87,7 +90,7 @@ var dataset = [
      "year": 2014, "quarter": 1, "region": "North West", "regional_manager": "Raphael", "sales": "15282.00"
    },
    {
-     "year": 2014, "quarter": 2, "region": "North West", "regional_manager": "Raphael", "sales": "1645400"
+     "year": 2014, "quarter": 2, "region": "North West", "regional_manager": "Raphael", "sales": "16454.00"
    },
    {
      "year": 2014, "quarter": 3, "region": "North West", "regional_manager": "Raphael", "sales": "19653.00"
@@ -109,8 +112,21 @@ var dataset = [
 //add filter table option
 
 //variables
-var salesArray=[];
+var totalSalesArray=[];
+var totalSalesArray2013=[];
+var totalSalesArray2014=[];
+var quarterTotalSales=[];
+var regionTotalSales=[];
+var quarter1Total=[];
+var quarter2Total=[];
+var quarter3Total=[];
+var quarter4Total=[];
+var quarter5Total=[];
+var quarter6Total=[];
+var quarter7Total=[];
+var quarter8Total=[];
 var label=[];
+var label2=[];
 
 //ID elements needed for year, quarter, and region
 var yearDropdown = document.getElementById('yearDrop');
@@ -122,25 +138,86 @@ function add(a, b) {
     return a + b;
 }
 
+/**************************************************************************************************************/
+/******************************************* GRAPH FUNCTIONS **************************************************/
+/*********************** Sorts the data and adds the sum for different Graphs *********************************/
+
 for (i=0; i < dataset.length; i++){
     //custom if with variables for dropdown options
     //replace "" "with dropdown values"
     //need two other conditions
     // if(dataset[i].quarter === 1){}
-    if(dataset[i].year === 2013 && dataset[i].region === "South East"){
     // if(dataset[i].quarter === 1 && dataset[i].year === 2013 && dataset[i].region === "South East"){
-    // if(dataset[i].region === "South West" && dataset[i].year === 2013){
-        salesArray.push(parseInt(dataset[i].sales));
-        label.push(dataset[i].regional_manager); // create labels needed for bar graph
-        console.log(salesArray);
-        var sum = salesArray.reduce(add, 0); //add up all sales in the new array
-    }
-}
+    // if(dataset[i].region === "South West" && dataset[i].year === 2013);
 
-console.log("sum: " + sum);
+    //For Total Sales per Quarter in a Year
+    if(dataset[i].year === 2013){
+        if(dataset[i].quarter === 1){
+            quarter1Total.push(parseInt(dataset[i].sales));
+            console.log("Quarter 1: " + quarter1Total);
+            var sum1 = quarter1Total.reduce(add, 0);
+        }
+        else if(dataset[i].quarter === 2){
+            quarter2Total.push(parseInt(dataset[i].sales));
+            console.log("Quarter 2: " + quarter2Total);
+            var sum2 = quarter2Total.reduce(add, 0);
+        }
+        else if(dataset[i].quarter === 3){
+            quarter3Total.push(parseInt(dataset[i].sales));
+            console.log("Quarter 3: " + quarter3Total);
+            var sum3 = quarter3Total.reduce(add, 0);
+        }
+        else{
+            quarter4Total.push(parseInt(dataset[i].sales));
+            console.log("Quarter 4: " + quarter4Total);
+            var sum4 = quarter4Total.reduce(add, 0);
+        }
+
+        totalSalesArray2013 = [sum1, sum2, sum3, sum4];
+        // totalSalesArray2013.push(parseInt(dataset[i].sales));
+        console.log("totalSalesArray2013: " + totalSalesArray2013);
+        var sum2013 = totalSalesArray2013.reduce(add, 0); //add up all sales in the new array
+
+  //2014
+    } else if (dataset[i].year === 2014){
+        // totalSalesArray2014.push(parseInt(dataset[i].sales));
+        if(dataset[i].quarter === 1){
+            quarter5Total.push(parseInt(dataset[i].sales));
+            console.log("Quarter 1: " +quarter1Total);
+            var sum5 = quarter5Total.reduce(add, 0);
+        }
+        else if(dataset[i].quarter === 2){
+            quarter6Total.push(parseInt(dataset[i].sales));
+            console.log("Quarter 2: " +quarter2Total);
+            var sum6 = quarter6Total.reduce(add, 0);
+        }
+        else if(dataset[i].quarter === 3){
+            quarter7Total.push(parseInt(dataset[i].sales));
+            console.log("Quarter 3: " + quarter3Total);
+            var sum7 = quarter7Total.reduce(add, 0);
+        }
+        else{
+            quarter8Total.push(parseInt(dataset[i].sales));
+            console.log("Quarter 4: " + quarter4Total);
+            var sum8 = quarter8Total.reduce(add, 0);
+        }
+
+        totalSalesArray2014 = [sum5, sum6, sum7, sum8];
+        console.log("totalSalesArray2014: " + totalSalesArray2013);
+        var sum2014 = totalSalesArray2014.reduce(add, 0);
+    }
+
+    //END OF TOTAL SALES PER Quarter
+
+    var totalSum = sum2013 + sum2014;
+    console.log("totalSum: " +  totalSum);
+}
+console.log("sum: " + totalSum);
+
+
+//post the total onto the total sales panel
 $(document).ready(function() {
-    if (sum != null){ document.getElementById('total-sales').innerHTML = sum; }
-    document.getElementById('total-sales').innerHTML = sum;
+    document.getElementById('total-sales').innerHTML = totalSum;
 });
 
 /**************************************************************************************************************/

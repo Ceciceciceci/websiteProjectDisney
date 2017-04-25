@@ -1,75 +1,72 @@
-// for the graphs
-//ctrl+f: chart #
+
+//JS File for datasetreport.html
+//Initialize and customizing the charts
+//To find chart: ctrl+f: chart #
 
 /***********************************************
 ****************** chart 1 **********************
 *************************************************/
-var ctx = document.getElementById("myChart")
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: label,
-        datasets: [{
-            label: 'SALES ($)',
-            data: salesArray,
-            backgroundColor: [
-                '#DFE10D',
-                '#E8620C',
-                '#40B9A4',
-                '#202E4A'
-            ],
-            borderWidth: 0,
-        }],
-    },
-    options: {
-        legend: {
-           display: false,
-           labels: {
-               fontColor: '#2E2E2E',
-               fontFamily: "Open Sans",
-               fontSize: 16,
-               boxWidth: 12,
-           }
-        }, //end of legends
-        title: {
-          display: true,
-          text: 'Sales For Quarter 1',
-          fontFamily: "Open Sans",
-          fontSize: 15
-        },
-        scales: {
-            xAxes: [{
-                gridLines: {
-                  display: false
-                },
-                ticks: {
+var data1 = {
+      labels:["Q1","Q2","Q3","Q4"],
+      datasets: [{
+          label: "2013",
+          backgroundColor: "#DFE10D",
+          data: totalSalesArray2013
+      }, {
+          label: "2014",
+          backgroundColor: "#E8620C",
+          data: totalSalesArray2014
+      }]
+}
+var options1 = {
+      legend: {
+         display: true,
+         labels: {
+             fontColor: '#2E2E2E',
+             fontFamily: "Open Sans",
+             fontSize: 16,
+             boxWidth: 12,
+             borderWidth: 0
+         }
+      }, //end of legends
+      scales: {
+          xAxes: [{
+              gridLines: {
+                display: false
+              },
+              ticks: {
+                fontFamily: "Open Sans",
+                fontSize: 12
+              },
+              scaleLabel: {
+                display: true,
+                fontFamily: "Open Sans",
+                fontSize: 12,
+                labelString: 'Regional Manager'
+              }
+          }],
+          yAxes: [{
+              ticks: {
+                  beginAtZero:true,
                   fontFamily: "Open Sans",
                   fontSize: 12
-                },
-                scaleLabel: {
-                  display: true,
-                  fontFamily: "Open Sans",
-                  fontSize: 12,
-                  labelString: 'Regional Manager'
-                }
-            }],
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true,
-                    fontFamily: "Open Sans",
-                    fontSize: 12
-                },
-                scaleLabel: {
-                  display: true,
-                  fontFamily: "Open Sans",
-                  fontSize: 12,
-                  labelString: 'Sales'
-                }
-            }]
-        } //end of scales
-    }
-});
+              },
+              scaleLabel: {
+                display: true,
+                fontFamily: "Open Sans",
+                fontSize: 12,
+                labelString: 'Sales'
+              }
+          }]
+      } //end of scales
+}
 
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: data1,
+    options: options1
+});
 
 /***********************************************
 ****************** chart 2 **********************
@@ -149,18 +146,16 @@ var myChart = new Chart(ctx, {
   var myChart = new Chart(ctx3, {
     type: 'bar',
     data: {
-        labels: label,
+        labels:["SE","NE","SW","NW"],
         datasets: [{
-            label: 'SALES ($)',
-            data: [7000,4000,3000,5000],
-            backgroundColor: [
-                '#DFE10D',
-                '#E8620C',
-                '#40B9A4',
-                '#202E4A'
-            ],
-            borderWidth: 0,
-        }],
+            label: "2013",
+            backgroundColor: "#DFE10D",
+            data: totalSalesArray2013
+        }, {
+            label: "2014",
+            backgroundColor: "#E8620C",
+            data: totalSalesArray2014
+        }]
     },
     options: {
         legend: {

@@ -1,4 +1,5 @@
 
+/*CSS File for datasetreport.html*/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,700');
 /************* GENERAL *************/
 html {
@@ -51,6 +52,7 @@ header .logout a{
     background-color: #E8620C;
     color: #F2F2F2;
     text-decoration: none;
+    margin-right: 10px;
 }
 
 header .logout a:hover{
@@ -236,12 +238,14 @@ header .logout a:hover{
 
 .panel1{
     background-color: #FFFFFF;
-    height: 200px;
-    width: 95%;
-    margin-bottom: 25px;
     left: 45px;
+  /*;*/
+    height: 425px;
+    margin-right: 55px;
+    margin-bottom: 5px;
     box-shadow: 1px 5px 5px 1px #E6E4E2;
 }
+
 .panel1 h2{
     color: #202E4A;
 }
@@ -291,7 +295,6 @@ header .logout a:hover{
 
 #fullDataSetTable tr:hover{
     background-color: rgba(223,225,13, 0.2);
-    /*background-color: rgba(232,98,12, 0.3);*/
 }
 
 .print-button{
@@ -359,19 +362,30 @@ header .logout a:hover{
 
 }
 
-.graph1,.graph3{
-  left: 45px;
+/*Quarter General Graph*/
+.graph1{
+  width: 625px;
+  height: 425px;
+  padding: 25px;
+  margin-bottom: 25px;
+  background-color: #FFFFFF;
+  box-shadow: 1px 5px 5px 1px #E6E4E2;
+}
+
+/*Region General Graph*/
+.graph3{
   width: 47%;
   padding: 25px;
-  margin-right: 55px;
   margin-bottom: 25px;
   background-color: #FFFFFF;
   box-shadow: 1px 5px 5px 1px #E6E4E2;
 }
 
 .graph2,.graph4{
+  left: 45px;
   width: 47%;
   padding: 25px;
+  margin-right: 55px;
   margin-bottom: 25px;
   background-color: #FFFFFF;
   box-shadow: 1px 5px 5px 1px #E6E4E2;

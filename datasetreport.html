@@ -41,14 +41,13 @@
 
             <!-- ***********************************
                         MAIN SIDEBAR MENU
-                        (Sales categories: dashboard, etc.)
+                        (Sales categories: dashboard, nav, calendar.)
             ****************************************-->
             <!--sidebar start-->
             <div id="sideNav">
                 <!-- sidebar menu start-->
                 <!-- <i class="fa fa-bars pull-right" style="color: #F2F2F2; font-size: 20px; margin-right:10px;"></i> -->
                 <h4>DASHBOARD</h4>
-                <!-- &nbsp;DASHBOARD -->
                 <ul class="link-main">
                     <li class="activelink">
                         <a href="datasetreport.html">
@@ -121,23 +120,23 @@
                           <li>29</li>
                           <li>30</li>
                       </ul>
-
                 </div>
+                <!-- end of calendar -->
             </div>
             <!--sidebar end-->
 
-            <!-- ********************************
-                        MAIN CONTENT
-                        includes the graphs
-            ************************************* -->
+            <!-- ******************************************
+                          MAIN CONTENT
+                          includes the graphs
+            ******************************************** -->
             <!--main content start-->
             <section id="main-content">
-                  <div class="blank-panel col-md-2 col-sm-2"></div>
+                  <div class="blank-panel col-md-2 col-sm-3"></div> <!--adds the spacing for the left-->
                   <div class="tables-panel col-md-10 col-sm-10">
-                        <div class="panel1 col-md-12 col-sm-12">
+                        <div class="panel1 col-md-4 col-sm-12">
                             <h2 class="col-md-12 col-sm-12 col-xs-12">Total Sales: <b>$<span id="total-sales"></span></b></h2>
                             <div class="col-md-12 col-sm-12 col-xs-12 custom-line"></div>
-                            <div class="col-md-2 col-sm-4">
+                            <div class="col-md-12 col-sm-12">
                                 <p class="year"><b>Year</b>&nbsp;&nbsp;<span class="caret"></span></a></p>
                                 <div class="form-select">
                                     <select class="yearDrop">
@@ -147,7 +146,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-2 col-sm-4">
+                            <div class="col-md-12 col-sm-12">
                                 <p class="quarter"><b>Quarter</b>&nbsp;&nbsp;<span class="caret"></span></a></p>
                                    <div class="form-select">
                                       <select class="quarterDrop">
@@ -159,7 +158,7 @@
                                       </select>
                                   </div>
                             </div>
-                            <div class="col-md-2 col-sm-4">
+                            <div class="col-md-12 col-sm-12">
                                 <p class="region"><b>Region</b>&nbsp;&nbsp;<span class="caret"></span></a></p>
                                    <div class="form-select">
                                       <select class="regionDrop">
@@ -172,61 +171,34 @@
                                   </div>
                             </div>
                         </div>
+                        <!--End of Total Sales panel-->
 
-                        <!--Decided on 4 main graphs -->
-                        <div class="graph1 col-md-6 col-sm-6">
-                            <div id="table-title"><h4>Quarter 1</h4>
-                                <div class="form-select2">
-                                  <select>Year
-                                    <option value="2013">2013</option>
-                                    <option value="2014">2014</option>
-                                  </select>
-                                  <select>Region
-                                    <option value="South West">South West</option>
-                                    <option value="North West">North West</option>
-                                    <option value="South East">South East</option>
-                                    <option value="North East">North East</option>
-                                  </select>
-                                </div>
+    <!-- *******************************************************************************-->
+    <!-- ***************************** GRAPH SECTION ***********************************-->
+    <!-- *******************************************************************************-->
+                        <!--Decided on 3 main graphs -->
+                        <div class="graph1 col-md-8 col-sm-4">
+                            <div id="table-title">
+                              <h4>Total Sales Per Quarter</h4>
                             </div>
-                            <canvas id="myChart" width="80" height="70"></canvas>
+                            <canvas id="myChart" width="100" height="60"></canvas>
                         </div>
-                        <div class="graph2 col-md-6 col-sm-6">
-                            <div id="table-title"><h4>Quarter 2</h4>
-                                <div class="form-select2">
-                                  <select>Year
-                                    <option value="2013">2013</option>
-                                    <option value="2014">2014</option>
-                                  </select>
-                                  <select>Region
-                                    <option value="South West">South West</option>
-                                    <option value="North West">North West</option>
-                                    <option value="South East">South East</option>
-                                    <option value="North East">North East</option>
-                                  </select>
-                                </div>
+
+                        <div class="graph2 col-md-6 col-sm-4">
+                            <div id="table-title"><h4>Total Sales Per Manager</h4>
                             </div>
-                            <canvas id="myChart2" width="80" height="70"></canvas>
+                            <canvas id="myChart2" width="100" height="60"></canvas>
                         </div>
+
                         <div class="graph3 col-md-6 col-sm-6">
-                            <div id="table-title"><h4>Quarter 3</h4>
-                                <div class="form-select2">
-                                  <select>Year
-                                    <option value="2013">2013</option>
-                                    <option value="2014">2014</option>
-                                  </select>
-                                  <select>Region
-                                    <option value="South West">South West</option>
-                                    <option value="North West">North West</option>
-                                    <option value="South East">South East</option>
-                                    <option value="North East">North East</option>
-                                  </select>
-                                </div>
+                            <div id="table-title"><h4>Total Sales Per Region</h4>
                             </div>
-                            <canvas id="myChart3" width="80" height="70"></canvas>
+                            <canvas id="myChart3" width="100" height="60"></canvas>
                         </div>
+
+                        <!--Extra Details Graphs-->
                         <div class="graph4 col-md-6 col-sm-6">
-                            <div id="table-title"><h4>Quarter 4</h4>
+                            <div id="table-title"><h4>Quarter 1</h4>
                                 <div class="form-select2">
                                   <select>Year
                                     <option value="2013">2013</option>
@@ -242,6 +214,58 @@
                             </div>
                             <canvas id="myChart4" width="80" height="70"></canvas>
                         </div>
+                        <div class="graph4 col-md-6 col-sm-6">
+                            <div id="table-title"><h4>Quarter 1</h4>
+                                <div class="form-select2">
+                                  <select>Year
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                  </select>
+                                  <select>Region
+                                    <option value="South West">South West</option>
+                                    <option value="North West">North West</option>
+                                    <option value="South East">South East</option>
+                                    <option value="North East">North East</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <canvas id="myChart4" width="80" height="70"></canvas>
+                        </div>
+                        <div class="graph5 col-md-6 col-sm-6">
+                            <div id="table-title"><h4>Quarter 1</h4>
+                                <div class="form-select2">
+                                  <select>Year
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                  </select>
+                                  <select>Region
+                                    <option value="South West">South West</option>
+                                    <option value="North West">North West</option>
+                                    <option value="South East">South East</option>
+                                    <option value="North East">North East</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <canvas id="myChart5" width="80" height="70"></canvas>
+                        </div>
+                        <div class="graph6 col-md-6 col-sm-6">
+                            <div id="table-title"><h4>Quarter 1</h4>
+                                <div class="form-select2">
+                                  <select>Year
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                  </select>
+                                  <select>Region
+                                    <option value="South West">South West</option>
+                                    <option value="North West">North West</option>
+                                    <option value="South East">South East</option>
+                                    <option value="North East">North East</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <canvas id="myChart6" width="80" height="70"></canvas>
+                        </div>
+
 
                         <!-- printable table of the data -->
                         <div class="panel2 col-md-12 col-sm-12">
@@ -261,8 +285,10 @@
                                 </table>
                             </div>
                         </div>
+                        <!--End of Printable Table-->
+
                   </div>
-                  <!-- <graph> -->
+                  <!-- <graph-panels> -->
             </section>
 
     </body>

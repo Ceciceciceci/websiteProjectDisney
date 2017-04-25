@@ -1,4 +1,4 @@
-
+//JS Page for resume.html
 /*******************NAVBAR*******************/
 
 //FIX NAVBAR TO TOP
@@ -31,9 +31,8 @@ $(document).ready(function() {
 
 
 $(window).scroll(function () {
-    // console.log($(window).scrollTop());
     var pageScroll = $(this).scrollTop();
-    //fade in some sections of the website
+    //fade in some section 3's work panel
     if (pageScroll > $('.section3').offset().top-($(window).height()/2)){
         setTimeout(function(){
              $('.section3 .work-panel').addClass('fading-in');
@@ -41,32 +40,18 @@ $(window).scroll(function () {
     }
 });
 
-$(window).scroll(function () {
-    // console.log($(window).scrollTop());
-    var pageScroll = $(this).scrollTop();
-    //fade in some sections of the website
-    if (pageScroll > $('.section6').offset().top-($(window).height()/2)){
-      setTimeout(function(){
-           $('.section6 .icon-panel').addClass('fading-in');
-        }, 400)
-    }
-});
-
-//SMOOTH SCROLLING
+//Smooth scrolling to the hash item /#id
 $(document).ready(function(){
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {
         if (this.hash !== "") {
           //test if hash id exists
             event.preventDefault();
-            // Store hash
             var hash = this.hash;
-            //animate and scroll Top method to add smooth page scroll
             $('html, body').animate({
                 scrollTop: $(hash).offset().top - 40
             }, 1000, function(){
-              // Add hash (#) to URL when done scrolling (default click behavior)
-              window.location.hash = hash;
+              window.location.hash = hash; // Add hash id to URL after scroll
             });
         }
     });
