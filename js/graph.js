@@ -74,15 +74,15 @@ var myChart = new Chart(ctx, {
   var myChart = new Chart(ctx2, {
     type: 'bar',
     data:{
-      labels:["South East","South West","North East","North West"],
+      labels:["John","Leonardo","Paul","George","Michelangelo","Ringo","Raphael","Donatello"],
           datasets: [{
               label: "2013",
-              backgroundColor: "#DFE10D",
-              data: totalRegionArray2013
+              backgroundColor: "#40B9A4",
+              data: totalManagerArray2013
           }, {
               label: "2014",
               backgroundColor: "#E8620C",
-              data: totalRegionArray2014
+              data: totalManagerArray2014
           }],
     },
     options: {
@@ -96,10 +96,7 @@ var myChart = new Chart(ctx, {
            }
         }, //end of legends
         title: {
-          display: true,
-          text: 'Sales For Quarter 2',
-          fontFamily: "Open Sans",
-          fontSize: 15
+          display: false
         },
         scales: {
             xAxes: [{
@@ -149,7 +146,7 @@ var myChart = new Chart(ctx, {
               data: totalRegionArray2013
           }, {
               label: "2014",
-              backgroundColor: "#E8620C",
+              backgroundColor: "#40B9A4",
               data: totalRegionArray2014
           }],
     },
@@ -210,7 +207,7 @@ var myChart = new Chart(ctx, {
         labels: label,
         datasets: [{
             label: 'SALES ($)',
-            data: [4000,6000,8000,1000,5000],
+            data: [4000,6000,8000,1000],
             backgroundColor: [
                 '#DFE10D',
                 '#E8620C',
@@ -233,7 +230,7 @@ var myChart = new Chart(ctx, {
         }, //end of legends
         title: {
           display: true,
-          text: 'Sales For Quarter 4',
+          text: 'Sales For Quarter 1',
           fontFamily: "Open Sans",
           fontSize: 15
         },

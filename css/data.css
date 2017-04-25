@@ -126,7 +126,7 @@ header .logout a:hover{
 }
 
 @keyframes opacityscale {
-    0% {background-color: #202E4A;}
+    0% {background-color: #1abc9c;}
     100% {background-color: #1abc9c;}
 }
 
@@ -234,6 +234,10 @@ header .logout a:hover{
     margin-top: 75px;
     margin-bottom: 50px;
     width 95%;
+}
+
+.table-title{
+  padding-bottom:15px;
 }
 
 .panel1{

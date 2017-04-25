@@ -131,7 +131,7 @@ var totalManagerArray=[];
 var totalManagerArray2013=[];
 var totalManagerArray2014=[];
 var managerTotalSales=[];
-var m1Total=[],m2Total=[],m3Total=[], m4Total=[],m5Total=[],m6Total=[],m7Total=[],m8Total=[];
+var johnTotal=[],leoTotal=[], paulTotal=[], georgeTotal=[], michelTotal=[], ringoTotal=[],raphaelTotal=[],donaTotal=[];
 
 //for labels
 var label=[];
@@ -204,9 +204,45 @@ for (i=0; i < dataset.length; i++){
             var sumr4 = nwTotal.reduce(add, 0);
         }
 
+        //manager total: john, leo, paul, george, michaelangelo, ringo, raphael
+        switch (dataset[i].regional_manager) {
+            case "John":
+                johnTotal.push(parseInt(dataset[i].sales));
+                var summ1 = johnTotal.reduce(add, 0);
+                break;
+            case "Leonardo":
+                leoTotal.push(parseInt(dataset[i].sales));
+                var summ2 = leoTotal.reduce(add, 0);
+                break;
+            case "Paul":
+                paulTotal.push(parseInt(dataset[i].sales));
+                var summ3 = paulTotal.reduce(add, 0);
+                break;
+            case "George":
+                georgeTotal.push(parseInt(dataset[i].sales));
+                var summ4 = georgeTotal.reduce(add, 0);
+                break;
+            case "Michelangelo":
+                michelTotal.push(parseInt(dataset[i].sales));
+                var summ5 = michelTotal.reduce(add, 0);
+                break;
+            case "Ringo":
+                ringoTotal.push(parseInt(dataset[i].sales));
+                var summ6 = ringoTotal.reduce(add, 0);
+                break;
+            case "Raphael":
+                raphaelTotal.push(parseInt(dataset[i].sales));
+                var summ7 = raphaelTotal.reduce(add, 0);
+                break;
+            case "Donatello":
+                donaTotal.push(parseInt(dataset[i].sales));
+                var summ8 = donaTotal.reduce(add, 0);
+                break;
+        }
         //total
         totalSalesArray2013 = [sum1, sum2, sum3, sum4];
         totalRegionArray2013=[sumr1, sumr2, sumr3, sumr4];
+        totalManagerArray2013 = [summ1,summ2,summ3,summ4,summ5,summ6,summ7,summ8];
         console.log("totalSalesArray2013: " + totalSalesArray2013);
         var sum2013 = totalSalesArray2013.reduce(add, 0);
         var sumRegion2013 = totalRegionArray2013.reduce(add, 0);
@@ -257,11 +293,46 @@ for (i=0; i < dataset.length; i++){
             var sumr8 = nw2Total.reduce(add, 0);
         }
 
+        //Manager total: leo, donatello, paul, michaelangelo, raphael
+        switch (dataset[i].regional_manager) {
+            case "John":
+                johnTotal.push(parseInt(dataset[i].sales));
+                var summ1b = johnTotal.reduce(add, 0);
+                break;
+            case "Leonardo":
+                leoTotal.push(parseInt(dataset[i].sales));
+                var summ2b = leoTotal.reduce(add, 0);
+                break;
+            case "Paul":
+                paulTotal.push(parseInt(dataset[i].sales));
+                var summ3b = paulTotal.reduce(add, 0);
+                break;
+            case "George":
+                georgeTotal.push(parseInt(dataset[i].sales));
+                var summ4b = georgeTotal.reduce(add, 0);
+                break;
+            case "Michelangelo":
+                michelTotal.push(parseInt(dataset[i].sales));
+                var summ5b = michelTotal.reduce(add, 0);
+                break;
+            case "Ringo":
+                ringoTotal.push(parseInt(dataset[i].sales));
+                var summ6b = ringoTotal.reduce(add, 0);
+                break;
+            case "Raphael":
+                raphaelTotal.push(parseInt(dataset[i].sales));
+                var summ7b = raphaelTotal.reduce(add, 0);
+                break;
+            case "Donatello":
+                donaTotal.push(parseInt(dataset[i].sales));
+                var summ8b = donaTotal.reduce(add, 0);
+                break;
+        }
 
-        //Manager
         //total
         totalSalesArray2014 = [sum5, sum6, sum7, sum8];
         totalRegionArray2014 = [sumr5, sumr6, sumr7, sumr8];
+        totalManagerArray2014 = [summ1b,summ2b,summ3b,summ4b,summ5b,summ6b,summ7b,summ8b];
         console.log("totalSalesArray2014: " + totalSalesArray2013);
         var sum2014 = totalSalesArray2014.reduce(add, 0);
         var sumRegion2014 = totalRegionArray2014.reduce(add, 0);
