@@ -87,7 +87,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         legend: {
-           display: false,
+           display: true,
            labels: {
                fontColor: '#2E2E2E',
                fontFamily: "Open Sans",
@@ -207,7 +207,7 @@ var myChart = new Chart(ctx, {
         labels: label,
         datasets: [{
             label: 'SALES ($)',
-            data: [4000,6000,8000,1000],
+            data: totalSalesArray,
             backgroundColor: [
                 '#DFE10D',
                 '#E8620C',
@@ -278,7 +278,7 @@ var myChart = new Chart(ctx, {
         labels: label,
         datasets: [{
             label: 'SALES ($)',
-            data: salesArray,
+            data: totalSalesArray,
             backgroundColor: [
                 '#DFE10D',
                 '#E8620C',
@@ -392,57 +392,6 @@ var myChart = new Chart(ctx, {
   *************************************************/
   var ctx7 = document.getElementById("myChart7");
   var myChart = new Chart(ctx7, {
-      type: 'bar',
-      data: {
-          labels: ["George", "Michaelangelo", "Paul", "Raphael"],
-          datasets: [{
-              label: 'SALES ($)',
-              data: [10000, 20500, 15200, 35400],
-              backgroundColor: [
-                  '#DFE10D',
-                  '#E8620C',
-                  '#40B9A4',
-                  '#202E4A'
-              ],
-              borderWidth: 0,
-          }],
-      },
-      options: {
-        legend: {
-           display: true,
-           labels: {
-               fontColor: '#2E2E2E',
-               fontFamily: "Open Sans",
-               fontSize: 16,
-               boxWidth: 12,
-           }
-        }, //end of legends
-          scales: {
-              xAxes: [{
-                  gridLines: {
-                    display: false
-                  },
-                  ticks: {
-                    fontFamily: "Open Sans",
-                    fontSize: 12
-                  }
-              }],
-              yAxes: [{
-                  ticks: {
-                      beginAtZero:true,
-                      fontFamily: "Open Sans",
-                      fontSize: 12
-                  }
-              }]
-          }
-      }
-  });
-
-  /***********************************************
-  ****************** chart 8 **********************
-  *************************************************/
-  var ctx8 = document.getElementById("myChart8");
-  var myChart = new Chart(ctx8, {
       type: 'bar',
       data: {
           labels: ["George", "Michaelangelo", "Paul", "Raphael"],
