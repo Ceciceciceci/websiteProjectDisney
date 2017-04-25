@@ -109,24 +109,32 @@ var dataset = [
 //custom if with variables for dropdown options
     //replace "" "with dropdown values"
     //need two other conditions
-//add filter table option
+//add filter table option (extra use case)
 
-//variables
+//array variables
+//for total sales for quarter
 var totalSalesArray=[];
 var totalSalesArray2013=[];
 var totalSalesArray2014=[];
 var quarterTotalSales=[];
+var quarter1Total=[], quarter2Total=[], quarter3Total=[], quarter4Total=[],quarter5Total=[],quarter6Total=[],quarter7Total=[],quarter8Total=[];
+
+//for total sales per region
+var totalRegionArray=[];
+var totalRegionArray2013=[];
+var totalRegionArray2014=[];
 var regionTotalSales=[];
-var quarter1Total=[];
-var quarter2Total=[];
-var quarter3Total=[];
-var quarter4Total=[];
-var quarter5Total=[];
-var quarter6Total=[];
-var quarter7Total=[];
-var quarter8Total=[];
+var seTotal=[],swTotal=[],neTotal=[],nwTotal=[],se2Total=[],sw2Total=[],ne2Total=[],nw2Total=[];
+
+//for total sales per manager
+var totalManagerArray=[];
+var totalManagerArray2013=[];
+var totalManagerArray2014=[];
+var managerTotalSales=[];
+var m1Total=[],m2Total=[],m3Total=[], m4Total=[],m5Total=[],m6Total=[],m7Total=[],m8Total=[];
+
+//for labels
 var label=[];
-var label2=[];
 
 //ID elements needed for year, quarter, and region
 var yearDropdown = document.getElementById('yearDrop');
@@ -152,72 +160,122 @@ for (i=0; i < dataset.length; i++){
 
     //For Total Sales per Quarter in a Year
     if(dataset[i].year === 2013){
+        //quarter
         if(dataset[i].quarter === 1){
             quarter1Total.push(parseInt(dataset[i].sales));
-            console.log("Quarter 1: " + quarter1Total);
+            // console.log("Quarter 1: " + quarter1Total);
             var sum1 = quarter1Total.reduce(add, 0);
         }
         else if(dataset[i].quarter === 2){
             quarter2Total.push(parseInt(dataset[i].sales));
-            console.log("Quarter 2: " + quarter2Total);
+            // console.log("Quarter 2: " + quarter2Total);
             var sum2 = quarter2Total.reduce(add, 0);
         }
         else if(dataset[i].quarter === 3){
             quarter3Total.push(parseInt(dataset[i].sales));
-            console.log("Quarter 3: " + quarter3Total);
+            // console.log("Quarter 3: " + quarter3Total);
             var sum3 = quarter3Total.reduce(add, 0);
         }
         else{
             quarter4Total.push(parseInt(dataset[i].sales));
-            console.log("Quarter 4: " + quarter4Total);
+            // console.log("Quarter 4: " + quarter4Total);
             var sum4 = quarter4Total.reduce(add, 0);
         }
 
-        totalSalesArray2013 = [sum1, sum2, sum3, sum4];
-        // totalSalesArray2013.push(parseInt(dataset[i].sales));
-        console.log("totalSalesArray2013: " + totalSalesArray2013);
-        var sum2013 = totalSalesArray2013.reduce(add, 0); //add up all sales in the new array
+        //region
+        if (dataset[i].region === "South East"){
+            seTotal.push(parseInt(dataset[i].sales));
+            console.log("SouthEast " + swTotal);
+            var sumr1 = seTotal.reduce(add, 0);
+        }
+        else if(dataset[i].region === "South West"){
+            swTotal.push(parseInt(dataset[i].sales));
+            console.log("SouthWest " + swTotal);
+            var sumr2 = swTotal.reduce(add, 0);
+        }
+        else if(dataset[i].region === "North East"){
+            neTotal.push(parseInt(dataset[i].sales));
+            console.log("NorthEast " + quarter3Total);
+            var sumr3 = neTotal.reduce(add, 0);
+        }
+        else{
+            nwTotal.push(parseInt(dataset[i].sales));
+            console.log("NorthWest " + quarter4Total);
+            var sumr4 = nwTotal.reduce(add, 0);
+        }
 
-  //2014
+        //total
+        totalSalesArray2013 = [sum1, sum2, sum3, sum4];
+        totalRegionArray2013=[sumr1, sumr2, sumr3, sumr4];
+        console.log("totalSalesArray2013: " + totalSalesArray2013);
+        var sum2013 = totalSalesArray2013.reduce(add, 0);
+        var sumRegion2013 = totalRegionArray2013.reduce(add, 0);
+
+    //2014
     } else if (dataset[i].year === 2014){
-        // totalSalesArray2014.push(parseInt(dataset[i].sales));
+        //quarter
         if(dataset[i].quarter === 1){
             quarter5Total.push(parseInt(dataset[i].sales));
-            console.log("Quarter 1: " +quarter1Total);
+            // console.log("Quarter 1: " +quarter1Total);
             var sum5 = quarter5Total.reduce(add, 0);
         }
         else if(dataset[i].quarter === 2){
             quarter6Total.push(parseInt(dataset[i].sales));
-            console.log("Quarter 2: " +quarter2Total);
+            // console.log("Quarter 2: " +quarter2Total);
             var sum6 = quarter6Total.reduce(add, 0);
         }
         else if(dataset[i].quarter === 3){
             quarter7Total.push(parseInt(dataset[i].sales));
-            console.log("Quarter 3: " + quarter3Total);
+            // console.log("Quarter 3: " + quarter3Total);
             var sum7 = quarter7Total.reduce(add, 0);
         }
         else{
             quarter8Total.push(parseInt(dataset[i].sales));
-            console.log("Quarter 4: " + quarter4Total);
+            // console.log("Quarter 4: " + quarter4Total);
             var sum8 = quarter8Total.reduce(add, 0);
         }
 
+        //region
+        if (dataset[i].region === "South East"){
+            se2Total.push(parseInt(dataset[i].sales));
+            console.log("SouthWest " + swTotal);
+            var sumr5 = se2Total.reduce(add, 0);
+        }
+        else if(dataset[i].region === "South West"){
+            sw2Total.push(parseInt(dataset[i].sales));
+            console.log("SouthWest " + swTotal);
+            var sumr6 = sw2Total.reduce(add, 0);
+        }
+        else if(dataset[i].region === "North East"){
+            ne2Total.push(parseInt(dataset[i].sales));
+            console.log("NorthEast " + quarter3Total);
+            var sumr7 = ne2Total.reduce(add, 0);
+        }
+        else{
+            nw2Total.push(parseInt(dataset[i].sales));
+            console.log("NorthWest " + quarter4Total);
+            var sumr8 = nw2Total.reduce(add, 0);
+        }
+
+
+        //Manager
+        //total
         totalSalesArray2014 = [sum5, sum6, sum7, sum8];
+        totalRegionArray2014 = [sumr5, sumr6, sumr7, sumr8];
         console.log("totalSalesArray2014: " + totalSalesArray2013);
         var sum2014 = totalSalesArray2014.reduce(add, 0);
+        var sumRegion2014 = totalRegionArray2014.reduce(add, 0);
     }
 
     //END OF TOTAL SALES PER Quarter
-
     var totalSum = sum2013 + sum2014;
-    console.log("totalSum: " +  totalSum);
 }
 console.log("sum: " + totalSum);
 
 
 //post the total onto the total sales panel
 $(document).ready(function() {
-    document.getElementById('total-sales').innerHTML = totalSum;
+    document.getElementById('total-sales').innerHTML = sum2013;
 });
 
 /**************************************************************************************************************/

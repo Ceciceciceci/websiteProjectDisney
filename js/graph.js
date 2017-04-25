@@ -6,66 +6,64 @@
 /***********************************************
 ****************** chart 1 **********************
 *************************************************/
-var data1 = {
-      labels:["Q1","Q2","Q3","Q4"],
-      datasets: [{
-          label: "2013",
-          backgroundColor: "#DFE10D",
-          data: totalSalesArray2013
-      }, {
-          label: "2014",
-          backgroundColor: "#E8620C",
-          data: totalSalesArray2014
-      }]
-}
-var options1 = {
-      legend: {
-         display: true,
-         labels: {
-             fontColor: '#2E2E2E',
-             fontFamily: "Open Sans",
-             fontSize: 16,
-             boxWidth: 12,
-             borderWidth: 0
-         }
-      }, //end of legends
-      scales: {
-          xAxes: [{
-              gridLines: {
-                display: false
-              },
-              ticks: {
-                fontFamily: "Open Sans",
-                fontSize: 12
-              },
-              scaleLabel: {
-                display: true,
-                fontFamily: "Open Sans",
-                fontSize: 12,
-                labelString: 'Regional Manager'
-              }
-          }],
-          yAxes: [{
-              ticks: {
-                  beginAtZero:true,
-                  fontFamily: "Open Sans",
-                  fontSize: 12
-              },
-              scaleLabel: {
-                display: true,
-                fontFamily: "Open Sans",
-                fontSize: 12,
-                labelString: 'Sales'
-              }
-          }]
-      } //end of scales
-}
 
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
     type: 'bar',
-    data: data1,
-    options: options1
+    data:{
+      labels:["Q1","Q2","Q3","Q4"],
+          datasets: [{
+              label: "2013",
+              backgroundColor: "#DFE10D",
+              data: totalSalesArray2013
+          }, {
+              label: "2014",
+              backgroundColor: "#E8620C",
+              data: totalSalesArray2014
+          }],
+    },
+    options: {
+        legend: {
+             display: true,
+             labels: {
+                 fontColor: '#2E2E2E',
+                 fontFamily: "Open Sans",
+                 fontSize: 16,
+                 boxWidth: 12,
+                 borderWidth: 0
+             }
+          }, //end of legends
+          scales: {
+              xAxes: [{
+                  gridLines: {
+                    display: false
+                  },
+                  ticks: {
+                    fontFamily: "Open Sans",
+                    fontSize: 12
+                  },
+                  scaleLabel: {
+                    display: true,
+                    fontFamily: "Open Sans",
+                    fontSize: 12,
+                    labelString: 'Quarter'
+                  }
+              }],
+              yAxes: [{
+                  ticks: {
+                      beginAtZero:true,
+                      fontFamily: "Open Sans",
+                      fontSize: 12
+                  },
+                  scaleLabel: {
+                    display: true,
+                    fontFamily: "Open Sans",
+                    fontSize: 12,
+                    labelString: 'Sales'
+                  }
+              }]
+          } //end of scales
+      }
 });
 
 /***********************************************
@@ -75,19 +73,17 @@ var myChart = new Chart(ctx, {
   var ctx2 = document.getElementById("myChart2");
   var myChart = new Chart(ctx2, {
     type: 'bar',
-    data: {
-        labels: label,
-        datasets: [{
-            label: 'SALES ($)',
-            data: [30300,50000,41050,60700],
-            backgroundColor: [
-                '#DFE10D',
-                '#E8620C',
-                '#40B9A4',
-                '#202E4A'
-            ],
-            borderWidth: 0,
-        }],
+    data:{
+      labels:["South East","South West","North East","North West"],
+          datasets: [{
+              label: "2013",
+              backgroundColor: "#DFE10D",
+              data: totalRegionArray2013
+          }, {
+              label: "2014",
+              backgroundColor: "#E8620C",
+              data: totalRegionArray2014
+          }],
     },
     options: {
         legend: {
@@ -145,21 +141,21 @@ var myChart = new Chart(ctx, {
   var ctx3 = document.getElementById("myChart3");
   var myChart = new Chart(ctx3, {
     type: 'bar',
-    data: {
-        labels:["SE","NE","SW","NW"],
-        datasets: [{
-            label: "2013",
-            backgroundColor: "#DFE10D",
-            data: totalSalesArray2013
-        }, {
-            label: "2014",
-            backgroundColor: "#E8620C",
-            data: totalSalesArray2014
-        }]
+    data:{
+      labels:["South East","South West","North East","North West"],
+          datasets: [{
+              label: "2013",
+              backgroundColor: "#DFE10D",
+              data: totalRegionArray2013
+          }, {
+              label: "2014",
+              backgroundColor: "#E8620C",
+              data: totalRegionArray2014
+          }],
     },
     options: {
         legend: {
-           display: false,
+           display: true,
            labels: {
                fontColor: '#2E2E2E',
                fontFamily: "Open Sans",
@@ -168,10 +164,7 @@ var myChart = new Chart(ctx, {
            }
         }, //end of legends
         title: {
-          display: true,
-          text: 'Sales For Quarter 3',
-          fontFamily: "Open Sans",
-          fontSize: 15
+          display: false
         },
         scales: {
             xAxes: [{
@@ -186,7 +179,7 @@ var myChart = new Chart(ctx, {
                   display: true,
                   fontFamily: "Open Sans",
                   fontSize: 12,
-                  labelString: 'Regional Manager'
+                  labelString: 'Region'
                 }
             }],
             yAxes: [{
@@ -235,6 +228,7 @@ var myChart = new Chart(ctx, {
                fontFamily: "Open Sans",
                fontSize: 16,
                boxWidth: 12,
+               borderWidth: 1
            }
         }, //end of legends
         title: {
