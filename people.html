@@ -17,10 +17,21 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
       <script src="https://use.fontawesome.com/7ef29430c8.js"></script>
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script> -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-    </head>
+      <style>
+      .activeToggle{
+          transform: translate3d(150px, 0, 0);
+      }
+      </style>
 
+      <script>
+        var body = $('.people-body'),
+            navToggleBtn = body.find('.navToggleBtn');
+
+        navToggleBtn.on('click', function(e) {
+            body.toggleClass('activeToggle');
+            e.preventDefault();
+        });
+      </script>
     <body class="people-body">
         <section id="container">
             <!-- *************************************
@@ -31,9 +42,9 @@
             <header class="header white">
                 <div class="nav-bar" id="top_bar">
                     <ul class="nav navbar-nav">
-                        <li class="username">Welcome  <b>Manager</b></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
+                        <li class="username">Welcome,  <b>US Director of Sales</b></li>
                         <li class="logout pull-right"><a href="resume.html"></span>LOG OUT</a></li>
                     </ul>
                 </div>
@@ -47,21 +58,21 @@
             <!--sidebar start-->
             <div id="sideNav">
                 <!-- sidebar menu start-->
-                <h4>DASHBOARD  <i class="fa fa-bars pull-right" style="color: #F2F2F2; font-size: 20px; margin-right:10px;"></i> </h4>
-                <!-- &nbsp;DASHBOARD -->
+                <h4>DASHBOARD</h4>
+                <a href="#" class="navToggleBtn"><i class="fa fa-bars" style="color: #F2F2F2; font-size: 20px; margin-left:15px; margin-top:15px;"></i></a>
                 <ul class="link-main">
-                    <li href="datasetreport.html">
+                    <li>
                         <a href="datasetreport.html">
                             <i class="fa fa-home" style="color: #F2F2F2; font-size: 12px;"></i> &nbsp;<span>HOME</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="datasetreport.html">
                             <i class="fa fa-database" style="color: #F2F2F2; font-size: 12px;"></i> &nbsp;<span>DESCRIPTION</span>
                         </a>
                     </li>
-                    <li class="activelink">
-                        <a href="#">
+                    <li  class="activelink">
+                        <a href="people.html">
                             <i class="fa fa-user-circle" style="color: #F2F2F2; font-size: 12px;"></i> &nbsp;<span>PEOPLE</span>
                         </a>
                     </li>
@@ -112,14 +123,14 @@
                           <li>18</li>
                           <li>19</li>
                           <li>20</li>
-                          <li><span class="active">21</span></li>
+                          <li>21</li>
                           <li>22</li>
                           <li>23</li>
                           <li>24</li>
                           <li>25</li>
                           <li>26</li>
                           <li>27</li>
-                          <li>28</li>
+                          <li><span class="active">28</span></li>
                           <li>29</li>
                           <li>30</li>
                       </ul>
@@ -134,12 +145,10 @@
             ************************************* -->
             <!--main content start-->
             <section id="main-content">
-                  <div class="blank-panel col-md-2"></div>
-                  <div class="tables-panel col-md-10">
-                        <!-- <div class="panel1 col-md-12"> -->
+                  <div class="manager-panel col-md-12">
                         <!--8 managers; 4 boxes across each-->
                         <!--First row of managers-->
-                        <div class="card col-md-2">
+                        <div class="card col-md-3">
                             <center><img src="images/icon.png" class="img-circle" style="width:70%; height:80%; margin-top:15px;"></center>
                             <h3>John</h3>
                             <p class="phone"><b>Phone Number</b></p>
@@ -147,7 +156,7 @@
                             <p class="email"><b>Email Address</b></p>
                             <p>john@disney.com</p>
                         </div>
-                        <div class="card col-md-2">
+                        <div class="card col-md-3">
                             <center><img src="images/icon3.png" class="img-circle" style="width:70%; height:80%; margin-top:15px;"></center>
                             <h3>Leonardo</h3>
                             <p class="phone"><b>Phone Number</b></p>
@@ -155,7 +164,7 @@
                             <p class="email"><b>Email Address</b></p>
                             <p>leonardo@disney.com</p>
                         </div>
-                        <div class="card col-md-2">
+                        <div class="card col-md-3">
                             <center><img src="images/icon.png" class="img-circle" style="width:70%; height:80%; margin-top:15px;"></center>
                             <h3>Paul</h3>
                             <p class="phone"><b>Phone Number</b></p>
@@ -163,7 +172,7 @@
                             <p class="email"><b>Email Address</b></p>
                             <p>paul@disney.com</p>
                         </div>
-                        <div class="card col-md-2">
+                        <div class="card col-md-3">
                             <center><img src="images/icon3.png" class="img-circle" style="width:70%; height:80%; margin-top:15px;"></center>
                             <h3>George</h3>
                             <p class="phone"><b>Phone Number</b></p>
@@ -172,7 +181,7 @@
                             <p>george@disney.com</p>
                         </div>
                         <!--2nd row of managers-->
-                        <div class="card col-md-2">
+                        <div class="card col-md-3">
                             <center><img src="images/icon.png" class="img-circle" style="width:70%; height:80%; margin-top:15px;"></center>
                             <h3>Michelangelo</h3>
                             <p class="phone"><b>Phone Number</b></p>
@@ -180,7 +189,7 @@
                             <p class="email"><b>Email Address</b></p>
                             <p>michelangelo@disney.com</p>
                         </div>
-                        <div class="card col-md-2">
+                        <div class="card col-md-3">
                             <center><img src="images/icon2.png" class="img-circle" style="width:70%; height:80%; margin-top:15px;"></center>
                             <h3>Ringo</h3>
                             <p class="phone"><b>Phone Number</b></p>
@@ -188,7 +197,7 @@
                             <p class="email"><b>Email Address</b></p>
                             <p>ringo@disney.com</p>
                         </div>
-                        <div class="card col-md-2">
+                        <div class="card col-md-3">
                             <center><img src="images/icon.png" class="img-circle" style="width:70%; height:80%; margin-top:15px;"></center>
                             <h3>Raphael</h3>
                             <p class="phone"><b>Phone Number</b></p>
@@ -196,7 +205,7 @@
                             <p class="email"><b>Email Address</b></p>
                             <p>rraphael@disney.com</p>
                         </div>
-                        <div class="card col-md-2">
+                        <div class="card col-md-3">
                             <center><img src="images/icon3.png" class="img-circle" style="width:70%; height:80%; margin-top:15px;"></center>
                             <h3>Donatello</h3>
                             <p class="phone"><b>Phone Number</b></p>
@@ -208,6 +217,5 @@
                   </div>
                   <!-- <graph> -->
             </section>
-
     </body>
 </html>
