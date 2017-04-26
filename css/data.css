@@ -1,6 +1,7 @@
 
 /*CSS File for datasetreport.html*/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,700');
+
 /************* GENERAL *************/
 html {
     font-family: sans-serif;
@@ -33,12 +34,11 @@ header{
 }
 
 header li{
-    margin-left: 275px;
     color: #2E2E2E;
 }
 
 header .username{
-    padding: 16px 0px 16px 0px;
+    padding: 16px 40px 16px 0px;
 }
 
 header .logout{
@@ -75,10 +75,22 @@ header .logout a:hover{
     z-index: 5;
     background: #202E4A;
     color: #F2F2F2;
+    transform: translate3d(0px, 0, 0);
+    transition: transform 0.4s ease;
 }
 
-.hide{
+.navToggleBtn {
+    position: absolute;
+    top:0;
+    left: 250px;
+    width: 50px;
+    height: 50px;
+    background-color: #131E39;
+    border-radius: 0px 5px 5px 0px;
+}
 
+.activeToggle #sideNav {
+    transform: translate3d(-250px, 0, 0);
 }
 
 #sideNav h4{
@@ -112,17 +124,19 @@ header .logout a:hover{
     color: #F2F2F2;
     border-radius: 2px;
     margin-left: 65px;
+    margin-right: 65px;
+    padding: 0px 100px 0px 0px;
 }
 
 .link-main li:hover{
     background-color: #1abc9c;
-    -webkit-animation: opacityscale 0.5s infinite; /* Safari 4+ */
-     -moz-animation:   opacityscale 0.5s infinite; /* Fx 5+ */
-     -o-animation:     opacityscale 0.5s infinite; /* Opera 12+ */
-     animation:        opacityscale 0.5s infinite;
-     animation-iteration-count: 1;
-     animation-fill-mode: forwards;
-     cursor: pointer;
+    -webkit-animation: opacityscale 0.5s infinite;
+    -moz-animation:   opacityscale 0.5s infinite;
+    -o-animation:     opacityscale 0.5s infinite;
+    animation:        opacityscale 0.5s infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    cursor: pointer;
 }
 
 @keyframes opacityscale {
@@ -225,15 +239,22 @@ header .logout a:hover{
 /*************BODY SECTION*************/
 /**************************************/
 #main-content{
-  /*position: absolute;*/
   background-color: #E6E4E2;
   z-index:1;
+  transform: translate3d(200px, 0, 0);
+  transition: transform 0.4s ease;
+
+}
+
+.activeToggle #main-content {
+    transform: translate3d(150px, 0, 0);
+
 }
 
 .tables-panel{
     margin-top: 75px;
     margin-bottom: 50px;
-    width 95%;
+    width 100%;
 }
 
 .table-title{
@@ -243,7 +264,6 @@ header .logout a:hover{
 .panel1{
     background-color: #FFFFFF;
     left: 45px;
-  /*;*/
     height: 425px;
     margin-right: 55px;
     margin-bottom: 5px;

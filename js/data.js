@@ -104,19 +104,19 @@ var dataset = [
 /**************************************************************************************************************/
 /**************************************************************************************************************/
 //*******************TO-DO
-//set toggle condition for side nav with fa-bars
-//grab fa-bars and also subtract left on col blocks
 //custom if with variables for dropdown options
     //replace "" "with dropdown values"
     //need two other conditions
-//add filter table option (extra use case)
 
 //custom if with variables for dropdown options
 //replace "" "with dropdown values"
-//need two other conditions
+//need two other conditions, switch conditions inside
+// if(dataset[i].year === $this value yearDrop){
+    // if (dataset[i].quarter = )
+
 // if(dataset[i].quarter === 1){}
-// if(dataset[i].quarter === 1 && dataset[i].year === 2013 && dataset[i].region === "South East"){
 // if(dataset[i].region === "South West" && dataset[i].year === 2013);
+// if(dataset[i].quarter === getElementById quarterDrop && dataset[i].year === getElementById yearDrop && dataset[i].region === getElementById regionDrop){
 
 
 /********************************** VARIABLES *************************************/
@@ -329,6 +329,14 @@ for (i=0; i < dataset.length; i++){
 //post the total onto the total sales panel
 $(document).ready(function() {
     document.getElementById('total-sales').innerHTML = sum2013;
+
+    var body = $('body'),
+        navToggleBtn = body.find('.navToggleBtn');
+
+    navToggleBtn.on('click', function(e) {
+        body.toggleClass('activeToggle');
+        e.preventDefault();
+    });
 });
 
 /**************************************************************************************************************/
@@ -368,5 +376,3 @@ function printTable()
 $('.print-button').on('click',function(){
     printTable();
 })
-
-//add filter table option

@@ -16,17 +16,23 @@ Bootstrap<br>
 Jquery<br>
 ChartJS<br>
 Fa Fonts<br>
-<br><br>
 
 <u>Page 1: </u>
 Showcases my resume in a web page.<br>
 Audience: Interviewees or Recruiters
-Outlooks: Clean and easy to consume.  Minimized animations for easy load and soft look.
+Goal: Clean and easy to consume.  Minimized animations for easy load and soft look.
+The button to go to the Part two of the project is located at the bottom.
 <br>
 <u>Page 2 (or more):</u>
 The US Director of Sales has asked for a web-based report which outlines how the company is performing. A web page that displays the information in the data set in a meaningful way for the director.<br><br>
 Audience: US Director of Sales
-Outlook: Give a general sense of the company in the huge picture before the graphs that detail out the extra bits. There is a table included at the end for printing out of the data set given.  This is intended if the director or any sales manager needs the info only and not the graphs.
+Goal: Give a general sense of the company in the huge picture before the graphs that detail out the extra bits. There is a table included at the end for printing out of the data set given.  This is intended if the director or any sales manager needs the info only and not the graphs.<br>
+<u>Side Navigation Tabs: </u>
+Home: The dashboard
+Description: Field descriptions
+People: Shows the phone numbers and emails of the managers
+<br>
+The button to go back to the resume is to click logout.
 
 <b>How can you run this project</b>
 <br>
@@ -43,4 +49,4 @@ or not I wanted to have static data that I typed in or use an array to make logi
 for each graph like searching in a database.
 <br>
 
-Thank you for taking the time to look!
+<b>Thank you for taking the time to look!</b>

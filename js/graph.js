@@ -344,7 +344,7 @@ var myChart = new Chart(ctx, {
   var myChart = new Chart(ctx6, {
       type: 'bar',
       data: {
-          labels: ["George", "Michaelangelo", "Paul", "Raphael"],
+          labels: ["Paul", "Leonardo", "Michelangelo", "Raphael"],
           datasets: [{
               label: 'SALES ($)',
               data: [10000, 20500, 15200, 35400],
