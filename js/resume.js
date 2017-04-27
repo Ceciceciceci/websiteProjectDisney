@@ -4,7 +4,6 @@
 //Fix Navbar to the top while scrolling
 $(document).ready(function() {
   $(window).scroll(function () {
-      // console.log($(window).scrollTop());
       var pageScroll = $(this).scrollTop();
       if ($(window).scrollTop() > 0) {
           $('#nav_bar').addClass('fixed-navbar');

@@ -287,7 +287,7 @@ var myChart = new Chart(ctx, {
         scales: {
             xAxes: [{
                 gridLines: {
-                  display: false
+                  display: true
                 },
                 ticks: {
                   fontFamily: "Open Sans",
@@ -383,7 +383,7 @@ var myChart = new Chart(ctx, {
         scales: {
             xAxes: [{
                 gridLines: {
-                  display: false
+                  display: true
                 },
                 ticks: {
                   fontFamily: "Open Sans",
@@ -508,11 +508,17 @@ var myChart = new Chart(ctx, {
           scales: {
               xAxes: [{
                   gridLines: {
-                    display: false
+                    display: true
                   },
                   ticks: {
                     fontFamily: "Open Sans",
                     fontSize: 12
+                  },
+                  scaleLabel: {
+                    display: true,
+                    fontFamily: "Open Sans",
+                    fontSize: 12,
+                    labelString: 'Quarter'
                   }
               }],
               yAxes: [{
@@ -521,6 +527,12 @@ var myChart = new Chart(ctx, {
                       fontFamily: "Open Sans",
                       fontSize: 12,
                       max: 30000
+                  },
+                  scaleLabel: {
+                    display: true,
+                    fontFamily: "Open Sans",
+                    fontSize: 12,
+                    labelString: 'Sales'
                   }
               }]
           }
