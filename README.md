@@ -6,7 +6,7 @@ Make a website with at least 2 separate pages.
 Assesses skill in creative design using HTML, CSS and JavaScript.
 <br>
 Choice of Editor: Atom
-<br><br>
+<br>
 
 <b>Description</b>
 <br>
@@ -16,6 +16,7 @@ Bootstrap<br>
 Jquery<br>
 ChartJS<br>
 Fa Fonts<br>
+Sortable.js<br>
 
 <u>Page 1: </u>
 Showcases my resume in a web page.<br>
@@ -44,7 +45,7 @@ The button to go back to the resume is to click logout.
 <b>Lessons learned</b>
 How to Graph: Most difficult part of the project is deciding what type of graphs
 would best represent the data.  It required me to look to business friends or manager
-who have ran a business before making sales. 
+who have ran a business before making sales.
 <br>
 
 <b>Presentation Slides for the Project</b>

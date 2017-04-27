@@ -228,7 +228,6 @@ header .logout a:hover{
 }
 
 /* Highlight the "current" day */
-/* Write JQuery for this later to select the date and mark it active*/
 .days li .active {
     padding: 2px 4px 2px 4px;
     background-color: #1ABC9C;
@@ -258,10 +257,7 @@ header .logout a:hover{
     width: 100%;
 }
 
-.table-title{
-  padding-bottom:15px;
-}
-
+/*Total Sales panel*/
 .panel1{
     background-color: #FFFFFF;
     height: 425px;
@@ -283,6 +279,7 @@ header .logout a:hover{
     opacity:0.1;
 }
 
+/*Table portion*/
 .panel2{
     background-color: #FFFFFF;
     height: 100%;
@@ -322,6 +319,13 @@ header .logout a:hover{
 
 .print-button{
    background-color: #DFE10D;
+}
+
+table.sortable thead {
+    background-color:#eee;
+    color:#666666;
+    font-weight: bold;
+    cursor:pointer;
 }
 
 #total-year, #total-quarter{
@@ -450,6 +454,19 @@ header .logout a:hover{
   margin-bottom: 15px;
   background-color: #FFFFFF;
   box-shadow: 1px 5px 5px 1px #E6E4E2;
+}
+
+.graph2,.graph3{
+    height: 450px;
+}
+
+.graph4,.graph5{
+    height: 500px;
+}
+
+.graph1,.graph2,.graph3,.graph4,.graph5 h4{
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 /************* PEOPLE SECTION *************/

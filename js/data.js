@@ -332,6 +332,7 @@ $(document).ready(function() {
 function printFullTable(data)
 {
     var table = document.getElementById('fullDataSetTable'); //grab table
+    var tableBody = document.createElement('tbody');
     for (var i = 0; i < data.length; i++)
     {
         var dataset1= data[i];
@@ -344,7 +345,7 @@ function printFullTable(data)
             cell.innerHTML = dataset1[properties[j]];
             row.appendChild(cell); //append value to cell inthat row
         }
-        table.appendChild(row); //add row
+        table.appendChild(tableBody).append(row); //add row
     }
 }
 printFullTable(dataset);
@@ -362,3 +363,5 @@ function printTable()
 $('.print-button').on('click',function(){
     printTable();
 })
+
+//table sorter
