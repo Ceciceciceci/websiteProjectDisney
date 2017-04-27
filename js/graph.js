@@ -321,7 +321,7 @@ var myChart = new Chart(ctx, {
 
   /***********************************************
   ****************** chart 5 **********************
-  *************************************************/
+  *********** 2013 Detailed Quarter Sales *********/
   var ctx5 = document.getElementById("myChart5");
   var myChart = new Chart(ctx5, {
     type: 'line',
@@ -416,7 +416,7 @@ var myChart = new Chart(ctx, {
 
   /***********************************************
   ****************** chart 6 **********************
-  *************************************************/
+  *********** Manager Detailed Sales *************/
   var ctx6 = document.getElementById("myChart6");
   var myChart6 = new Chart(ctx6, {
       type: 'line',
