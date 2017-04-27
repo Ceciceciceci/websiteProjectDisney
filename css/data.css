@@ -488,18 +488,28 @@ table.sortable thead {
 /*For Screen resize*/
 /*1020 in media size change layout*/
 @media screen and (max-width: 1020px) {
-  .panel1,.graph2,.graph3,.graph4,.graph5,.graph6,.graph7{
+  .panel1,.graph2,.graph3{
     width: 550px;
+    height: 510px;
   }
 
   .panel1{
     margin-bottom: 15px;
   }
-
   .panel2 {
-    width:550px;
+    width:575px;
   }
-}
 
-@media screen and (max-width: 650px) {
+  .graph4,.graph5{
+    width: 550px;
+    height: 600px;
+  }
+
+  .graph6{
+    width: 100%;
+    height: 460px;
+  }
+  body{
+    overflow: visible;
+  }
 }
