@@ -104,16 +104,6 @@ var dataset = [
 /**************************************************************************************************************/
 /**************************************************************************************************************/
 //*******************TO-DO
-//custom if with variables for dropdown options
-    //replace "" "with dropdown values"
-    //need two other conditions
-
-//custom if with variables for dropdown options
-//replace "" "with dropdown values"
-//need two other conditions, switch conditions inside
-// if(dataset[i].year === $this value yearDrop){
-    // if (dataset[i].quarter = )
-
 // if(dataset[i].quarter === 1){}
 // if(dataset[i].region === "South West" && dataset[i].year === 2013);
 // if(dataset[i].quarter === getElementById quarterDrop && dataset[i].year === getElementById yearDrop && dataset[i].region === getElementById regionDrop){
@@ -143,11 +133,6 @@ var johnTotal=[],leoTotal=[], paulTotal=[], georgeTotal=[], michelTotal=[], ring
 
 //for labels
 var label=[];
-
-//dropdown ID elements needed for year, quarter, and region
-var yearDropdown = document.getElementById('yearDrop');
-var quartDropdown = document.getElementById('quarterDrop');
-var regionDropdown = document.getElementById('regionDrop');
 
 //adds all items in sales
 function add(a, b) {
@@ -321,15 +306,16 @@ for (i=0; i < dataset.length; i++){
         var sum2014 = totalSalesArray2014.reduce(add, 0);
         var sumRegion2014 = totalRegionArray2014.reduce(add, 0);
     }
-
-    //END OF TOTAL SALES PER Quarter
+    //total sum for both years
     var totalSum = sum2013 + sum2014;
 }
 
+
 //post the total onto the total sales panel
 $(document).ready(function() {
-    document.getElementById('total-sales').innerHTML = sum2013;
-
+    document.getElementById('total-year').innerHTML = sum2014;
+    document.getElementById('total-quarter').innerHTML = sum8;
+//toggle nav
     var body = $('body'),
         navToggleBtn = body.find('.navToggleBtn');
 

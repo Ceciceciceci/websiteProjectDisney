@@ -2,23 +2,23 @@
 //JS File for datasetreport.html
 //Initialize and customizing the charts
 //To find chart: ctrl+f: chart #
-
 /***********************************************
 ****************** chart 1 **********************
-*************************************************/
+************ Total Sales by Quarter ***********/
 
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
     type: 'bar',
     data:{
+      animationSteps: 50000,
       labels:["Q1","Q2","Q3","Q4"],
           datasets: [{
               label: "2013",
-              backgroundColor: "#DFE10D",
+              backgroundColor: "#E8620C",
               data: totalSalesArray2013
           }, {
               label: "2014",
-              backgroundColor: "#E8620C",
+              backgroundColor: "#DFE10D",
               data: totalSalesArray2014
           }],
     },
@@ -33,6 +33,13 @@ var myChart = new Chart(ctx, {
                  borderWidth: 0
              }
           }, //end of legends
+          tooltips: {
+              callbacks: {
+                  label: function(tooltipItems, data) {
+                      return data.datasets[tooltipItems.datasetIndex].label +': ' + '$' +tooltipItems.yLabel;
+                  }
+              }
+          },
           scales: {
               xAxes: [{
                   gridLines: {
@@ -68,20 +75,20 @@ var myChart = new Chart(ctx, {
 
 /***********************************************
 ****************** chart 2 **********************
-*************************************************/
+********** Total Sales by Manager **************/
 
   var ctx2 = document.getElementById("myChart2");
   var myChart = new Chart(ctx2, {
-    type: 'bar',
+    type: 'horizontalBar',
     data:{
       labels:["John","Leonardo","Paul","George","Michelangelo","Ringo","Raphael","Donatello"],
           datasets: [{
               label: "2013",
-              backgroundColor: "#40B9A4",
+              backgroundColor: "#E8620C",
               data: totalManagerArray2013
           }, {
               label: "2014",
-              backgroundColor: "#E8620C",
+              backgroundColor: "#40B9A4",
               data: totalManagerArray2014
           }],
     },
@@ -93,8 +100,17 @@ var myChart = new Chart(ctx, {
                fontFamily: "Open Sans",
                fontSize: 16,
                boxWidth: 12,
+               padding:10,
+               borderWidth: 1
            }
         }, //end of legends
+        tooltips: {
+            callbacks: {
+                label: function(tooltipItems, data) {
+                    return data.datasets[tooltipItems.datasetIndex].label +': ' + '$' +tooltipItems.xLabel;
+                }
+            }
+        },
         title: {
           display: false
         },
@@ -111,7 +127,7 @@ var myChart = new Chart(ctx, {
                   display: true,
                   fontFamily: "Open Sans",
                   fontSize: 12,
-                  labelString: 'Regional Manager'
+                  labelString: 'Sales'
                 }
             }],
             yAxes: [{
@@ -124,7 +140,7 @@ var myChart = new Chart(ctx, {
                   display: true,
                   fontFamily: "Open Sans",
                   fontSize: 12,
-                  labelString: 'Sales'
+                  labelString: 'Regional Manager'
                 }
             }]
         } //end of scales
@@ -134,7 +150,7 @@ var myChart = new Chart(ctx, {
 
   /***********************************************
   ****************** chart 3 **********************
-  *************************************************/
+  ************Total Sales by Region **************/
   var ctx3 = document.getElementById("myChart3");
   var myChart = new Chart(ctx3, {
     type: 'bar',
@@ -142,11 +158,11 @@ var myChart = new Chart(ctx, {
       labels:["South East","South West","North East","North West"],
           datasets: [{
               label: "2013",
-              backgroundColor: "#DFE10D",
+              backgroundColor: "#40B9A4",
               data: totalRegionArray2013
           }, {
               label: "2014",
-              backgroundColor: "#40B9A4",
+              backgroundColor: "#DFE10D",
               data: totalRegionArray2014
           }],
     },
@@ -157,9 +173,16 @@ var myChart = new Chart(ctx, {
                fontColor: '#2E2E2E',
                fontFamily: "Open Sans",
                fontSize: 16,
-               boxWidth: 12,
+               boxWidth: 12
            }
         }, //end of legends
+        tooltips: {
+            callbacks: {
+                label: function(tooltipItems, data) {
+                    return data.datasets[tooltipItems.datasetIndex].label +': ' + '$' +tooltipItems.yLabel;
+                }
+            }
+        },
         title: {
           display: false
         },
@@ -183,7 +206,8 @@ var myChart = new Chart(ctx, {
                 ticks: {
                     beginAtZero:true,
                     fontFamily: "Open Sans",
-                    fontSize: 12
+                    fontSize: 12,
+                    max: 100000
                 },
                 scaleLabel: {
                   display: true,
@@ -202,35 +226,59 @@ var myChart = new Chart(ctx, {
   *************************************************/
   var ctx4 = document.getElementById("myChart4");
   var myChart = new Chart(ctx4, {
-    type: 'bar',
+    type: 'line',
     data: {
-        labels: label,
+        labels: ["Q1","Q2","Q3","Q4"],
         datasets: [{
-            label: 'SALES ($)',
-            data: totalSalesArray,
-            backgroundColor: [
-                '#DFE10D',
-                '#E8620C',
-                '#40B9A4',
-                '#202E4A'
-            ],
-            borderWidth: 0,
+              label: "South East",
+              data: [18378, 22284, 24473, 16206],
+              backgroundColor: "#40B9A4",
+              borderColor:"#40B9A4",
+              fill: false,
+              lineTension: 0
+          }, {
+              label: "South West",
+              data: [11436, 18152, 17919, 12747],
+              backgroundColor: "#E8620C",
+              borderColor:"#E8620C",
+              fill: false,
+              lineTension: 0
+          }, {
+              label: "North East",
+              data: [21630, 19603, 23947, 22444],
+              backgroundColor: "#DFE10D",
+              borderColor:"#DFE10D",
+              fill: false,
+              lineTension: 0
+          }, {
+              label: "North West",
+              data: [15282, 16454, 19653, 10284],
+              backgroundColor: "#929292",
+              borderColor:"#929292",
+              fill: false,
+              lineTension: 0
         }],
     },
     options: {
         legend: {
-           display: false,
+           display: true,
            labels: {
                fontColor: '#2E2E2E',
                fontFamily: "Open Sans",
                fontSize: 16,
-               boxWidth: 12,
-               borderWidth: 1
+               boxWidth: 12
            }
         }, //end of legends
+        tooltips: {
+            callbacks: {
+                label: function(tooltipItems, data) {
+                    return data.datasets[tooltipItems.datasetIndex].label +': ' + '$' +tooltipItems.yLabel;
+                }
+            }
+        },
         title: {
-          display: true,
-          text: 'Sales For Quarter 1',
+          display: false,
+          text: '2014 Sales Detailed',
           fontFamily: "Open Sans",
           fontSize: 15
         },
@@ -247,14 +295,15 @@ var myChart = new Chart(ctx, {
                   display: true,
                   fontFamily: "Open Sans",
                   fontSize: 12,
-                  labelString: 'Regional Manager'
+                  labelString: 'Quarter'
                 }
             }],
             yAxes: [{
                 ticks: {
                     beginAtZero:true,
                     fontFamily: "Open Sans",
-                    fontSize: 12
+                    fontSize: 12,
+                    max: 30000
                 },
                 scaleLabel: {
                   display: true,
@@ -273,24 +322,42 @@ var myChart = new Chart(ctx, {
   *************************************************/
   var ctx5 = document.getElementById("myChart5");
   var myChart = new Chart(ctx5, {
-    type: 'bar',
+    type: 'line',
     data: {
-        labels: label,
+        labels: ["Q1","Q2","Q3","Q4"],
         datasets: [{
-            label: 'SALES ($)',
-            data: totalSalesArray,
-            backgroundColor: [
-                '#DFE10D',
-                '#E8620C',
-                '#40B9A4',
-                '#202E4A'
-            ],
-            borderWidth: 0,
+              label: "South East",
+              data: [14013, 18600, 23353, 20756],
+              backgroundColor: "#40B9A4",
+              borderColor:"#40B9A4",
+              fill: false,
+              lineTension: 0
+          }, {
+              label: "South West",
+              data: [23409, 13113, 17097, 21796],
+              backgroundColor: "#E8620C",
+              borderColor:"#E8620C",
+              fill: false,
+              lineTension: 0
+          }, {
+              label: "North East",
+              data: [24149, 13119, 23284, 12697],
+              backgroundColor: "#DFE10D",
+              borderColor:"#DFE10D",
+              fill: false,
+              lineTension: 0
+          }, {
+              label: "North West",
+              data: [22486, 18383, 19190, 21011],
+              backgroundColor: "#929292",
+              borderColor:"#929292",
+              fill: false,
+              lineTension: 0
         }],
     },
     options: {
         legend: {
-           display: false,
+           display: true,
            labels: {
                fontColor: '#2E2E2E',
                fontFamily: "Open Sans",
@@ -298,9 +365,16 @@ var myChart = new Chart(ctx, {
                boxWidth: 12,
            }
         }, //end of legends
+        tooltips: {
+            callbacks: {
+                label: function(tooltipItems, data) {
+                    return data.datasets[tooltipItems.datasetIndex].label +': ' + '$' +tooltipItems.yLabel;
+                }
+            }
+        },
         title: {
-          display: true,
-          text: 'Sales For Quarter 1',
+          display: false,
+          text: '2013 Detailed Sales',
           fontFamily: "Open Sans",
           fontSize: 15
         },
@@ -317,14 +391,15 @@ var myChart = new Chart(ctx, {
                   display: true,
                   fontFamily: "Open Sans",
                   fontSize: 12,
-                  labelString: 'Regional Manager'
+                  labelString: 'Quarter'
                 }
             }],
             yAxes: [{
                 ticks: {
                     beginAtZero:true,
                     fontFamily: "Open Sans",
-                    fontSize: 12
+                    fontSize: 12,
+                    max: 30000
                 },
                 scaleLabel: {
                   display: true,

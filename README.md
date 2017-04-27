@@ -49,4 +49,7 @@ or not I wanted to have static data that I typed in or use an array to make logi
 for each graph like searching in a database.
 <br>
 
+<b>Presentation Slides for the Project</b>
+https://docs.google.com/presentation/d/1GediIa5_BzptsGTGxZnJpPiKHAwmnwezlGJInjd6B1I/edit?usp=sharing
+
 <b>Thank you for taking the time to look!</b>

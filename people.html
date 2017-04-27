@@ -6,7 +6,6 @@
       <meta name="description" content="Data Center for Sales.">
       <meta name="author" content="Cecilia Tran">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet"> -->
 
       <!--stylesheets-->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -17,26 +16,12 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
       <script src="https://use.fontawesome.com/7ef29430c8.js"></script>
-      <style>
-      .activeToggle{
-          transform: translate3d(150px, 0, 0);
-      }
-      </style>
-
-      <script>
-        var body = $('.people-body'),
-            navToggleBtn = body.find('.navToggleBtn');
-
-        navToggleBtn.on('click', function(e) {
-            body.toggleClass('activeToggle');
-            e.preventDefault();
-        });
-      </script>
-    <body class="people-body">
+    </head>
+    <body>
         <section id="container">
             <!-- *************************************
-              HEAD BAR (MAY NOT NEED BASED ON INFO GIVEN)
-              includes logout, sort, change view, and (alerts?)
+              HEAD BAR
+              includes logout -> resume.html
             ******************************************-->
             <!--header start-->
             <header class="header white">
@@ -51,10 +36,10 @@
             </header>
             <!--header end-->
 
-            <!-- ***********************************
-                        MAIN SIDEBAR MENU
-                        (Sales categories: dashboard, etc.)
-            ****************************************-->
+            <!-- *****************************************************
+              MAIN SIDEBAR MENU
+              Nav: dashboard -> datasetreport.html ,people -> people.html, calendar
+            ********************************************************-->
             <!--sidebar start-->
             <div id="sideNav">
                 <!-- sidebar menu start-->
@@ -66,11 +51,11 @@
                             <i class="fa fa-home" style="color: #F2F2F2; font-size: 12px;"></i> &nbsp;<span>HOME</span>
                         </a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="datasetreport.html">
                             <i class="fa fa-database" style="color: #F2F2F2; font-size: 12px;"></i> &nbsp;<span>DESCRIPTION</span>
                         </a>
-                    </li>
+                    </li> -->
                     <li  class="activelink">
                         <a href="people.html">
                             <i class="fa fa-user-circle" style="color: #F2F2F2; font-size: 12px;"></i> &nbsp;<span>PEOPLE</span>
@@ -90,8 +75,6 @@
                             </li>
                         </ul>
                       </div>
-                      <!-- <div></div> -->
-                      <!-- <hr> -->
                       <ul class="weekdays">
                           <li>Mo</li>
                           <li>Tu</li>
@@ -140,8 +123,8 @@
             <!--sidebar end-->
 
             <!-- ********************************
-                        MAIN CONTENT
-                        includes the graphs
+                MAIN CONTENT
+                manager cards with contact info
             ************************************* -->
             <!--main content start-->
             <section id="main-content">
@@ -213,9 +196,17 @@
                             <p class="email"><b>Email Address</b></p>
                             <p>ddonatello@disney.com</p>
                         </div>
-
                   </div>
-                  <!-- <graph> -->
             </section>
+            <script>
+                //toggle nav
+                $(document).ready(function(){
+                    var body = $('body'),
+                        navToggleBtn = body.find('.navToggleBtn');
+                        navToggleBtn.on('click', function(e) {
+                          body.toggleClass('activeToggle');
+                        });
+                  });
+            </script>
     </body>
 </html>
