@@ -44,9 +44,7 @@ The button to go back to the resume is to click logout.
 <b>Lessons learned</b>
 How to Graph: Most difficult part of the project is deciding what type of graphs
 would best represent the data.  It required me to look to business friends or manager
-who have ran a business before making sales. The next hardest thing is deciding whether
-or not I wanted to have static data that I typed in or use an array to make logic functions
-for each graph like searching in a database.
+who have ran a business before making sales. 
 <br>
 
 <b>Presentation Slides for the Project</b>
