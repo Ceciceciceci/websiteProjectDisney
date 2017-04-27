@@ -1,7 +1,7 @@
 //JS Page for resume.html
-/*******************NAVBAR*******************/
 
-//FIX NAVBAR TO TOP
+/*******************NAVBAR*******************/
+//Fix Navbar to the top while scrolling
 $(document).ready(function() {
   $(window).scroll(function () {
       // console.log($(window).scrollTop());
@@ -19,7 +19,7 @@ $(document).ready(function() {
 });
 
 
-/****************Pop out navbar****************/
+//Pop out navbar
 $(document).ready(function() {
       if( $('.handle').css('display') == ('block')) {
           $('.handle').on('click',function () {
@@ -29,10 +29,9 @@ $(document).ready(function() {
       }
 });
 
-
+//fade in some section 3's work panel
 $(window).scroll(function () {
     var pageScroll = $(this).scrollTop();
-    //fade in some section 3's work panel
     if (pageScroll > $('.section3').offset().top-($(window).height()/2)){
         setTimeout(function(){
              $('.section3 .work-panel').addClass('fading-in');
@@ -45,7 +44,6 @@ $(document).ready(function(){
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {
         if (this.hash !== "") {
-          //test if hash id exists
             event.preventDefault();
             var hash = this.hash;
             $('html, body').animate({
@@ -58,7 +56,6 @@ $(document).ready(function(){
 
     //change the active tag to the clicked nav item
     $(document).on('scroll', changeActiveNav);
-    // smoothscroll
     $('a[href^="#"]').on('click', function () {
         $('a').each(function () {
             $(this).removeClass('active');

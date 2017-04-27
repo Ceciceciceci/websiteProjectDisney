@@ -1,7 +1,8 @@
 
 //JS File for datasetreport.html
 //Initialize and customizing the charts
-//To find chart: ctrl+f: chart #
+//To find chart: ctrl+f: chart # or chart title
+
 /***********************************************
 ****************** chart 1 **********************
 ************ Total Sales by Quarter ***********/
@@ -32,7 +33,7 @@ var myChart = new Chart(ctx, {
                  boxWidth: 12,
                  borderWidth: 0
              }
-          }, //end of legends
+          },
           tooltips: {
               callbacks: {
                   label: function(tooltipItems, data) {
@@ -69,7 +70,7 @@ var myChart = new Chart(ctx, {
                     labelString: 'Sales'
                   }
               }]
-          } //end of scales
+          }
       }
 });
 
@@ -103,7 +104,7 @@ var myChart = new Chart(ctx, {
                padding:10,
                borderWidth: 1
            }
-        }, //end of legends
+        },
         tooltips: {
             callbacks: {
                 label: function(tooltipItems, data) {
@@ -143,7 +144,7 @@ var myChart = new Chart(ctx, {
                   labelString: 'Regional Manager'
                 }
             }]
-        } //end of scales
+        }
     }
 });
 
@@ -175,7 +176,7 @@ var myChart = new Chart(ctx, {
                fontSize: 16,
                boxWidth: 12
            }
-        }, //end of legends
+        },
         tooltips: {
             callbacks: {
                 label: function(tooltipItems, data) {
@@ -216,7 +217,7 @@ var myChart = new Chart(ctx, {
                   labelString: 'Sales'
                 }
             }]
-        } //end of scales
+        }
     }
 });
 
@@ -269,7 +270,7 @@ var myChart = new Chart(ctx, {
                boxWidth: 15,
                padding: 10
            }
-        }, //end of legends
+        },
         tooltips: {
             callbacks: {
                 label: function(tooltipItems, data) {
@@ -313,7 +314,7 @@ var myChart = new Chart(ctx, {
                   labelString: 'Sales'
                 }
             }]
-        } //end of scales
+        }
     }
 });
 
@@ -365,7 +366,7 @@ var myChart = new Chart(ctx, {
                fontSize: 16,
                boxWidth: 15,
            }
-        }, //end of legends
+        },
         tooltips: {
             callbacks: {
                 label: function(tooltipItems, data) {
@@ -409,7 +410,7 @@ var myChart = new Chart(ctx, {
                   labelString: 'Sales'
                 }
             }]
-        } //end of scales
+        }
     }
 });
 
@@ -496,7 +497,7 @@ var myChart = new Chart(ctx, {
                fontSize: 16,
                boxWidth: 12,
            }
-        }, //end of legends
+        },
         tooltips: {
             callbacks: {
                 label: function(tooltipItems, data) {
@@ -525,82 +526,3 @@ var myChart = new Chart(ctx, {
           }
       }
   });
-
-//update function dropdown for manager detailed chart
-function updateChart() {
-    var yearValue = $("#yearSelect").val();
-    if (yearValue === "2014"){
-      //John
-        myChart6.data.datasets[0].data[0] = null;
-        myChart6.data.datasets[0].data[1] = null;
-      // Leonardo
-        myChart6.data.datasets[1].data[0] = 18378;
-        myChart6.data.datasets[1].data[1] = 22284;
-        myChart6.data.datasets[1].data[2] = null;
-        myChart6.data.datasets[1].data[3] = null;
-      //Donatello
-        myChart6.data.datasets[7].data[2] = 24473;
-        myChart6.data.datasets[7].data[3] = 16286;
-      //Paul
-        myChart6.data.datasets[2].data[0] = 21630;
-        myChart6.data.datasets[2].data[1] = 19603;
-        myChart6.data.datasets[2].data[2] = 23947;
-        myChart6.data.datasets[2].data[3] = 22444;
-      //George
-        myChart6.data.datasets[3].data[0] = null;
-        myChart6.data.datasets[3].data[1] = null;
-        myChart6.data.datasets[3].data[2] = null;
-      //Michelangelo
-        myChart6.data.datasets[4].data[0] = 11436;
-        myChart6.data.datasets[4].data[1] = 18152;
-        myChart6.data.datasets[4].data[2] = 17919;
-        myChart6.data.datasets[4].data[3] = 12747;
-      //Ringo
-        myChart6.data.datasets[5].data[0] = null;
-      //Raphael
-        myChart6.data.datasets[6].data[0] = 15282;
-        myChart6.data.datasets[6].data[1] = 16454;
-        myChart6.data.datasets[6].data[2] = 19653;
-        myChart6.data.datasets[6].data[3] = 10284;
-
-        myChart6.update();
-    }
-    else{
-      //John
-        myChart6.data.datasets[0].data[0] = 14013;
-        myChart6.data.datasets[0].data[1] = 18600;
-      // Leonardo
-        myChart6.data.datasets[1].data[0] = null;
-        myChart6.data.datasets[1].data[1] = null;
-        myChart6.data.datasets[1].data[2] = 23353;
-        myChart6.data.datasets[1].data[3] = 20756;
-      //Paul
-        myChart6.data.datasets[2].data[0] = 24149;
-        myChart6.data.datasets[2].data[1] = 13119;
-        myChart6.data.datasets[2].data[2] = 23184;
-        myChart6.data.datasets[2].data[3] = 12697;
-      //George
-        myChart6.data.datasets[3].data[0] = 23409;
-        myChart6.data.datasets[3].data[1] = 13113;
-        myChart6.data.datasets[3].data[2] = 17097;
-      //Michelangelo
-        myChart6.data.datasets[4].data[0] = null;
-        myChart6.data.datasets[4].data[1] = null;
-        myChart6.data.datasets[4].data[2] = null;
-        myChart6.data.datasets[4].data[3] = 22444;
-      //Ringo
-        myChart6.data.datasets[5].data[0] = 22486;
-      //Raphael
-        myChart6.data.datasets[6].data[0] = null;
-        myChart6.data.datasets[6].data[1] = 18383;
-        myChart6.data.datasets[6].data[2] = 19190;
-        myChart6.data.datasets[6].data[3] = 21011;
-      //Donatello
-        myChart6.data.datasets[7].data[2] = null;
-        myChart6.data.datasets[7].data[3] = null;
-
-        myChart6.update();
-    }
-}
-$('#yearSelect').on('change', updateChart)
-updateChart();

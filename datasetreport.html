@@ -18,7 +18,6 @@
       <script src="https://use.fontawesome.com/7ef29430c8.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-      <script src="js/sorttable.js"></script>
   </head>
 
     <body>
@@ -56,11 +55,6 @@
                             <i class="fa fa-home" style="color: #F2F2F2; font-size: 12px;"></i> &nbsp;<span>HOME</span>
                         </a>
                     </li>
-                    <!-- <li>
-                        <a href="datasetreport.html">
-                            <i class="fa fa-database" style="color: #F2F2F2; font-size: 12px;"></i> &nbsp;<span>DESCRIPTION</span>
-                        </a>
-                    </li> -->
                     <li>
                         <a href="people.html">
                             <i class="fa fa-user-circle" style="color: #F2F2F2; font-size: 12px;"></i> &nbsp;<span>PEOPLE</span>
@@ -133,10 +127,9 @@
             ******************************************** -->
             <!--main content start-->
             <section id="main-content">
-                  <!-- adds the spacing for the left-->
                   <div class="tables-panel col-md-10 col-sm-10 col-xs-12">
+                      <!--Total Sales panel-->
                         <div class="panel1 col-md-4 col-sm-12 col-xs-12">
-                            <!--Total Sales panel-->
                             <h2 class="col-md-12 col-sm-12 col-xs-12"><b>Total Sales: </b></h2>
                             <div class="col-md-12 col-sm-12 col-xs-12 custom-line"></div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
@@ -161,7 +154,7 @@
     <!-- *******************************************************************************-->
     <!-- ***************************** GRAPH SECTION ***********************************-->
     <!-- *******************************************************************************-->
-                        <!--Decided on 3 main graphs -->
+                        <!--3 main general graphs -->
                         <div class="graph1 col-md-6 col-sm-12">
                             <div id="table-title">
                               <h4>Total Sales Per Quarter</h4>
@@ -190,6 +183,7 @@
                             </div><br>
                             <canvas id="myChart4" width="80" height="70"></canvas>
                         </div>
+
                         <div class="graph5 col-md-6 col-sm-12">
                             <div id="table-title">
                               <h4>2013 Sales Detailed by Region</h4>
@@ -198,7 +192,7 @@
                         </div>
 
                         <div class="graph6 col-md-12 col-sm-6">
-                            <div id="table-title"><h4>Manager Sales Detailed - Year</h4>
+                            <div id="table-title"><h4>Manager Sales Detailed by Year</h4>
                                 <div class="form-select2">
                                   <select id="yearSelect">
                                     <option value="2013">2013</option>
@@ -231,12 +225,12 @@
                             </div>
                         </div>
                         <!--End of Printable Table-->
-
                   </div>
-                  <!-- <graph-panels> -->
+                  <!-- end of graph-panels -->
             </section>
 
     </body>
+    <script src="js/sorttable.js"></script>
     <script src="js/data.js"></script>
     <script src="js/graph.js"></script>
 </html>
