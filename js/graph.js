@@ -151,7 +151,7 @@ var myChart = new Chart(ctx, {
 
   /***********************************************
   ****************** chart 3 **********************
-  ************Total Sales by Region **************/
+  ************ Total Sales by Region **************/
   var ctx3 = document.getElementById("myChart3");
   var myChart = new Chart(ctx3, {
     type: 'bar',

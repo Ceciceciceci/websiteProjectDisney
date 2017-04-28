@@ -103,11 +103,6 @@ var dataset = [
 /**************************************************************************************************************/
 /**************************************************************************************************************/
 /**************************************************************************************************************/
-//*******************TO-DO
-// if(dataset[i].quarter === 1){}
-// if(dataset[i].region === "South West" && dataset[i].year === 2013);
-// if(dataset[i].quarter === getElementById quarterDrop && dataset[i].year === getElementById yearDrop && dataset[i].region === getElementById regionDrop){
-
 
 /********************************** VARIABLES *************************************/
 //for total sales for quarter
@@ -441,7 +436,7 @@ function printTable()
    openWin.print();
    openWin.close();
 }
-//grab button
+//print button
 $('.print-button').on('click',function(){
     printTable();
 })
